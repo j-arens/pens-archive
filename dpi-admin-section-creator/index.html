@@ -1,0 +1,376 @@
+<section id="dpi-admin">
+
+  <!-- side nav -->
+  <aside id="side-nav">
+    <nav>
+      <a target="_blank" class="logo-box" href="http://diocesan.com">
+        <h2><strong>DPI</strong> Admin</h2>
+      </a>
+      <ul>
+        <li class="active"><i class="zmdi zmdi-settings"></i>Settings</li>
+        <li><i class="zmdi zmdi-wrench"></i>Builder</li>
+        <li><i class="zmdi zmdi-brush"></i>Colors</li>
+        <li><i class="zmdi zmdi-font"></i>Typography</li>
+        <li><i class="zmdi zmdi-collection-item-1"></i>Header</li>
+        <li><i class="zmdi zmdi-collection-item-2"></i>Homepage</li>
+        <li><i class="zmdi zmdi-collection-item-3"></i>Sidebar</li>
+        <li><i class="zmdi zmdi-collection-item-4"></i>Footer</li>
+      </ul>
+    </nav>
+  </aside>
+  <!-- end side nav -->
+
+  <!-- inner container -->
+  <div class="inner-container">
+    
+    <!-- section builder -->
+    <div id="section-builder-overlay">
+      <div id="section-builder">
+        <!--  titlebar  -->
+        <div class="builder-titlebar">
+          <h4 class="title">New Section</h4>
+          <div class="controls">
+            <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+            <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+          </div>
+        </div>
+        <!--  end titlebar -->
+        <ul class="modalcontainer">
+          <li class="modal-lg">
+            <div class="field-input">
+              <label>
+                Section Title
+                <input type="text" />
+              </label>
+            </div>
+          </li>
+          <li class="modal-lg">
+            <div class="field-input">
+              <label>
+                Components
+                <input type="text" />
+                <button class="btn add">+</button>
+              </label>
+            </div>
+          </li>
+          <li class="modal-lg">
+            <label>
+              <p><strong>Homepage</strong></p>
+              <p>- Slider</p>
+              <p>- About</p>
+              <p>- Link Box</p>
+              <p>- Slider</p>
+              <p>- About</p>
+              <p>- Link Box</p>
+            </label>
+          </li>
+          <li class="modal-lg">
+            <button class="btn-rg success" id="add-section">Create Section</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- end section builder-->
+
+    <!--  top nav  -->
+    <nav id="top-nav">
+      <h3 class="page-title">Builder</h3>
+      <ul>
+        <li><i class="zmdi zmdi-collection-plus"></i>Create Section</li>
+        <li><i class="zmdi zmdi-edit"></i>Header</li>
+      </ul>
+      <button class="btn-xlg success" id="submit">Save Settings</button>
+    </nav>
+    <!-- end top nav -->
+
+    <!-- section container -->
+    <ul class="modalcontainer">
+      
+      <!-- section -->
+      <li class="modal-section">
+        <!--  titlebar  -->
+        <div class="section-titlebar">
+          <h4 class="title">Header</h4>
+          <div class="controls">
+            <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+            <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+            <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+          </div>
+        </div>
+        <!--  end titlebar -->
+        <!-- modal container -->
+        <ul class="modalcontainer">
+
+          <!--  modal  -->
+          <li class="modal-lg">
+            <!--  titlebar  -->
+            <div class="modaltitlebar">
+              <p class="title">Quick Links</p>
+              <div class="controls">
+                <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+              </div>
+            </div>
+            <!--  end titlebar -->
+            <div class="field-input">
+              <label>
+            Elements
+            <input type="text" />
+            <button class="btn add">+</button>
+          </label>
+            </div>
+            <!-- element list -->
+            <ul class="elements">
+
+              <!--  element  -->
+              <li class="modal-md element">
+                <!--  titlebar  -->
+                <div class="modaltitlebar">
+                  <p class="title">Link 1</p>
+                  <div class="controls">
+                    <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                    <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                    <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+                  </div>
+                </div>
+                <!-- end titlebar -->
+                <!-- field select -->
+                <div class="field-input">
+                  <label>
+                Field Type
+                <select>
+                  <option value="">Field Type</option>
+                  <option value="Text">Text</option>
+                  <option value="TextArea">Text Area</option>
+                  <option value="Password">Password</option>
+                  <option value="SecretText">Secret Text</option>
+                  <option value="SingleCheckbox">Single Checkbox</option>
+                  <option value="MultipleCheckbox">Multiple Checkbox</option>
+                  <option value="RadioButtons">Radio Buttons</option>
+                  <option value="ColorPicker">Color Picker</option>
+                  <option value="ImageUpload">Image Upload</option>
+                </select>
+                <button class="btn add">+</button>
+              </label>
+                </div>
+                <!-- end field select -->
+                <!-- field -->
+                <div class="modal-sm field">
+                  <!--  titlebar  -->
+                  <div class="modaltitlebar">
+                    <p class="title">Text</p>
+                    <div class="controls">
+                      <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                      <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                      <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+                    </div>
+                  </div>
+                  <!-- end titlebar -->
+                  <div class="field-input">
+                    <label>
+                  Name
+                  <input type="text" />
+                </label>
+                    <label>
+                  Description
+                  <input type="text" />
+                </label>
+                  </div>
+                  <em><small>get_option( 'dpi_opt_header_quick_links_link_1_text_0' )</small></em>
+                </div>
+                <!-- end field -->
+              </li>
+              <!--  end element  -->
+
+            </ul>
+            <!-- end element list -->
+          </li>
+          <!--  end modal  -->
+          
+          <!--  modal  -->
+          <li class="modal-lg">
+            <!--  titlebar  -->
+            <div class="modaltitlebar">
+              <p class="title">Quick Links</p>
+              <div class="controls">
+                <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+              </div>
+            </div>
+            <!--  end titlebar -->
+            <div class="field-input">
+              <label>
+            Elements
+            <input type="text" />
+            <button class="btn add">+</button>
+          </label>
+            </div>
+            <!-- element list -->
+            <ul class="elements">
+
+              <!--  element  -->
+              <li class="modal-md element">
+                <!--  titlebar  -->
+                <div class="modaltitlebar">
+                  <p class="title">Link 1</p>
+                  <div class="controls">
+                    <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                    <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                    <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+                  </div>
+                </div>
+                <!-- end titlebar -->
+                <!-- field select -->
+                <div class="field-input">
+                  <label>
+                Field Type
+                <select>
+                  <option value="">Field Type</option>
+                  <option value="Text">Text</option>
+                  <option value="TextArea">Text Area</option>
+                  <option value="Password">Password</option>
+                  <option value="SecretText">Secret Text</option>
+                  <option value="SingleCheckbox">Single Checkbox</option>
+                  <option value="MultipleCheckbox">Multiple Checkbox</option>
+                  <option value="RadioButtons">Radio Buttons</option>
+                  <option value="ColorPicker">Color Picker</option>
+                  <option value="ImageUpload">Image Upload</option>
+                </select>
+                <button class="btn add">+</button>
+              </label>
+                </div>
+                <!-- end field select -->
+                <!-- field -->
+                <div class="modal-sm field">
+                  <!--  titlebar  -->
+                  <div class="modaltitlebar">
+                    <p class="title">Text</p>
+                    <div class="controls">
+                      <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                      <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                      <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+                    </div>
+                  </div>
+                  <!-- end titlebar -->
+                  <div class="field-input">
+                    <label>
+                  Name
+                  <input type="text" />
+                </label>
+                    <label>
+                  Description
+                  <input type="text" />
+                </label>
+                  </div>
+                  <em><small>get_option( 'dpi_opt_header_quick_links_link_1_text_0' )</small></em>
+                </div>
+                <!-- end field -->
+              </li>
+              <!--  end element  -->
+
+            </ul>
+            <!-- end element list -->
+          </li>
+          <!--  end modal  -->
+
+          <!--  modal  -->
+          <li class="modal-lg">
+            <!--  titlebar  -->
+            <div class="modaltitlebar">
+              <p class="title">Quick Links</p>
+              <div class="controls">
+                <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+              </div>
+            </div>
+            <!--  end titlebar -->
+            <div class="field-input">
+              <label>
+            Elements
+            <input type="text" />
+            <button class="btn add">+</button>
+          </label>
+            </div>
+            <!-- element list -->
+            <ul class="elements">
+
+              <!--  element  -->
+              <li class="modal-md element">
+                <!--  titlebar  -->
+                <div class="modaltitlebar">
+                  <p class="title">Link 1</p>
+                  <div class="controls">
+                    <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                    <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                    <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+                  </div>
+                </div>
+                <!-- end titlebar -->
+                <!-- field select -->
+                <div class="field-input">
+                  <label>
+                Field Type
+                <select>
+                  <option value="">Field Type</option>
+                  <option value="Text">Text</option>
+                  <option value="TextArea">Text Area</option>
+                  <option value="Password">Password</option>
+                  <option value="SecretText">Secret Text</option>
+                  <option value="SingleCheckbox">Single Checkbox</option>
+                  <option value="MultipleCheckbox">Multiple Checkbox</option>
+                  <option value="RadioButtons">Radio Buttons</option>
+                  <option value="ColorPicker">Color Picker</option>
+                  <option value="ImageUpload">Image Upload</option>
+                </select>
+                <button class="btn add">+</button>
+              </label>
+                </div>
+                <!-- end field select -->
+                <!-- field -->
+                <div class="modal-sm field">
+                  <!--  titlebar  -->
+                  <div class="modaltitlebar">
+                    <p class="title">Text</p>
+                    <div class="controls">
+                      <button class="btn-accordion"><i class="zmdi zmdi-triangle-up"></i></button>
+                      <button class="btn-settings"><i class="zmdi zmdi-settings"></i></button>
+                      <button class="btn-remove"><i class="zmdi zmdi-delete"></i></button>
+                    </div>
+                  </div>
+                  <!-- end titlebar -->
+                  <div class="field-input">
+                    <label>
+                  Name
+                  <input type="text" />
+                </label>
+                    <label>
+                  Description
+                  <input type="text" />
+                </label>
+                  </div>
+                  <em><small>get_option( 'dpi_opt_header_quick_links_link_1_text_0' )</small></em>
+                </div>
+                <!-- end field -->
+              </li>
+              <!--  end element  -->
+
+            </ul>
+            <!-- end element list -->
+          </li>
+          <!--  end modal  -->
+
+        </ul>
+        <!-- end modal container -->
+        
+      </li>
+      <!-- end section -->
+      
+    </ul>
+    <!-- end section container -->
+
+  </div>
+  <!--  end inner container  -->
+</section>

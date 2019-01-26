@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: #f1f1f1;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.postbox {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #fff;
+  height: auto;
+}
+
+/** dpi sm editor styles **/
+
+#dpi-sm-editor-root {
+  
+  .dpi-sm-menu-item-type {
+    .uk-form-label {
+      font-size: 1em;
+    }
+    
+    label {
+      display: inline-block;
+    }
+    
+    label + label {
+      margin-left: 1em;
+    }
+    
+    input[type="radio"] {
+      margin-right: .25em;
+    }
+  }
+  
+  .dpi-sm-custom-link-options {
+    input[type="radio"] {
+      margin-right: .25em;
+    }
+  }
+}
+
+

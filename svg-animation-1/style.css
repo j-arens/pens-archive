@@ -1,0 +1,100 @@
+
+
+:root {
+  --color-dk-blue: #4677FF;
+  --color-lt-blue: #41D6FF;
+  --color-yellow: #FFE315;
+  --color-lt-green: #E2F045;
+  --color-orange: #FF8500;
+  --color-dk-green: #15D120;
+  --color-purple: #DEA1F8;
+  --color-inner-fill: #FFCE00;
+  --color-inner-shadow: #FCBC03;
+  --color-inner-object: #4C3A30;
+}
+
+* {
+  box-sizing: border-box;
+  
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 15em;
+  height: 15em;
+  opacity: 0;
+  
+  & path {
+    transform-origin: center center;
+  }
+}
+
+.loader__ {
+  &is--visible {
+    opacity: 1;  
+  }
+  
+  &flare {
+    opacity: 0;
+  }
+  
+  &flare--dk-blue {
+    fill: var(--color-dk-blue);
+  }
+  
+  &flare--lt-blue {
+    fill: var(--color-lt-blue);
+  }
+  
+  &flare--yellow {
+    fill: var(--color-yellow);
+  }
+  
+  &flare--lt-green {
+    fill: var(--color-lt-green);
+  }
+  
+  &flare--orange {
+    fill: var(--color-orange);
+  }
+  
+  &flare--dk-green {
+    fill: var(--color-dk-green);
+  }
+  
+  &flare--purple {
+    fill: var(--color-purple);
+  }
+  
+  &inner-fill {
+    fill: var(--color-inner-fill);
+  }
+  
+  &inner-shadow {
+    fill: var(--color-inner-shadow);
+  }
+  
+  &inner-border {
+    stroke: var(--color-inner-object);
+    stroke-width: 4;
+    stroke-linejoin:round;
+  }
+  
+  &inner-checkmark {
+    fill: var(--color-inner-object);
+  }
+}

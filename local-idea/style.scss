@@ -1,0 +1,128 @@
+SE STYLES
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+body {
+  font-family: open sans, sans-serif;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/432525/geometry.png);
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-container {
+  max-width: 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  // border: 2px solid pink;
+}
+
+/*
+SEARCH AREA STYLES
+*/
+
+.search-container {
+  margin-top: 5%;
+  width: 35%;
+  position: relative;
+  // border: 2px solid pink;
+  display: flex;
+  flex-direction: column;
+  
+  h1,h2,h3 {
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    flex-basis: 30px;
+    font-size: 1em;
+    padding-left: 3px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 12%;
+    position: absolute;
+    top: 45px;
+    right: 1px;
+    padding: 4px;
+    background: none;
+    border: none;
+    font-size: 1.1em;
+    background: lighten(seagreen, 5);
+    color: white;
+    // opacity: 0.5;
+    cursor: pointer;
+    transition: all .5s ease;
+    display: none;
+    z-index: 10;
+    
+    &:hover {
+      background: seagreen;
+    }
+  }
+  
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  li {
+    background: darken(cornflowerblue, 10);
+    border-radius: 5%;
+    margin: 2px;
+    padding: 10px;
+    color: white;
+    text-align: center;
+    
+    &:hover {
+      cursor: pointer;
+      background: darken(cornflowerblue, 20);
+    }
+  }
+}
+
+/*
+RESULTS AREA STYLES
+*/
+
+.results-container {
+  width: 45%;
+  border: 2px solid pink;
+  margin-top: 5%;
+}
+
+/*
+MAP CONTAINER
+*/
+
+.map-container {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 70%;
+  height: 50%;
+  border-radius: 10px;
+  border: 3px solid white;
+}

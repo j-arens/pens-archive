@@ -1,0 +1,751 @@
+# https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css
+# https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.7.0/fullcalendar.min.css
+
+/* POST CSS MODULES */
+
+@use postcss-nested;
+@use lost;
+@use postcss-simple-vars;
+
+/* VARIBLES */
+
+/* colors */
+
+/* dashboard */
+$dash-bg: #eee;
+
+/* navigation */
+$nav-bg: #106EBE;
+$nav-active: #212121;
+$nav-hover: #2488D8;
+
+/* quick tasks */
+$qt-font: black;
+$qt-border: black;
+
+/* clock component */
+$clock-bg: #de5765;
+$clock-lowlight: #ad212f;
+$clock-highlight: #4cb683;
+$clock-hand: #374b54;
+$font-color: #fff;
+
+/* weather component */
+$weather-bg: #eaeaea;
+$weather-border: #d7d7d7;
+$weather-title-grey: #424242;
+$weather-title-red: #de5765;
+$weather-temp-lo: #b1b1b1;
+$weather-temp-hi: #424242;
+$weather-icon: #c5c5c5;
+
+/* delivery component */
+$delivery-bg: #f1fcff;
+$delivery-title: #424242;
+$delivery-title-bar: #28a9e0;
+$delivery-li-bg: #d7f3ff;
+$delivery-li-hover: #28a9e0;
+$delivery-li-font: #0087c1;
+$delivery-icon-bg: #67c4eb;
+
+/* stats component */
+$stats-bg: #ccc;
+$stats-title: #424242;
+$stats-title-bar: #49bf85;
+
+/* GRID CONFIG */
+
+@lost gutter 1em;
+
+/*
+BASE STYLES
+*/
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700,900);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: $dash-bg;
+/*   font-family: 'Roboto', sans-serif; */
+/*   lost-utility: edit; */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+
+$header-height: 0px;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 100px;
+  width: 100%;
+  height: 40px;
+  background: white;
+  display: table;
+  z-index: 30;
+  
+  h1 {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 30px;
+    font-size: 1.5em;
+  }
+}
+
+/* NAV */ 
+
+.sidebar-nav {
+  position: absolute;
+  top: $header-height;
+  left: 0;
+  z-index: 20;
+  width: 100px;
+  height: calc(100% - $header-height);
+  background: $nav-bg;
+  transition: all 0.367s cubic-bezier(0.1, 0.9, 0.2, 1);
+  
+  &:hover {
+    width: 230px;
+    
+    & .text-container {
+      left: 85px;
+    }
+  }
+  
+  li {
+    position: relative;
+    height: 70px;
+    
+    &:hover:not(.active) {
+      cursor: pointer;
+      background: $nav-hover;
+      
+      .icon-container {
+        background: $nav-hover;
+      }
+    }
+    
+    &:nth-child(7) {
+      position: absolute;
+      bottom: 70px;
+      width: 100%;
+    }
+    
+    &:last-child {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+  
+  .icon-container {
+    width: 100px;
+    height: 100%;
+    color: white;
+    background: $nav-bg;
+    position: relative;
+    z-index: 10;
+    
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.5rem;
+    }
+  }
+  
+  .text-container {
+    position: absolute;
+    top: 50%;
+    left: -400%;
+    transform: translate(0, -50%);
+    transition: all .2s ease;
+    z-index: 1;
+    color: white;
+    font-size: 1em;
+    z-index: 11;
+  }
+  
+  .active {
+    background: $nav-active;
+    
+    .icon-container {
+      background: $nav-active;
+    }
+    
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+/*
+DASHBOARD
+*/
+
+.dashboard {
+  lost-utility: clearfix;
+  position: absolute;
+  top: calc(($header-height + 5px) + 1em);
+  left: calc(100px + 2em);
+  width: calc(100% - (100px + 2em));
+  height: calc(100% - (($header-height + 5px) + 1em));
+  transform: translate(-1em, -.5em);
+}
+
+.row {
+  width: 100%;
+}
+
+/* CHANGE BREAKPOINTS TO 900 and 550 */
+.quick-tasks {
+  
+  .task {
+    height: 150px;
+    background: white;
+    border: 1px solid $qt-border;
+    position: relative;
+    margin-bottom: 8px;
+    color: $qt-font;
+    
+    &:hover {
+      cursor: pointer;
+      color: white;
+      background: black;
+      
+      span {
+        color: white;
+      }
+    }
+    
+    i {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%);
+      font-size: 1.5em;
+    }
+    
+    span {
+      position: absolute;
+      bottom: 1em;
+      left: 1em;
+    }
+  }
+}
+
+.delivery-container {
+  height: 400px;
+  margin-top: 20px;
+/*   max-width: 800px; */
+  
+  .ms-List {
+    width: 100%;
+    height: 100%;
+    background: white;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+}
+
+.calendar-container {
+/*   background: white; */
+  height: 400px;
+  margin-top: 20px;
+  overflow: hidden;
+  
+  #calendar {
+    background: white;
+    font-weight: normal;
+  }
+  
+  .fc-toolbar {
+    position: relative;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+    height: 60px;
+  }
+  
+  .fc-corner-left,
+  .fc-corner-right {
+    background: none;
+    border: none;
+    box-shadow: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  
+  .fc-button {
+    font-size: 1.2em;
+    color: #666666;
+  }
+  
+  .fc-next-button {
+    right: 1em;
+  }
+  
+  .fc-prev-button {
+    right: 5em;
+  }
+  
+  .fc-center {
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    transform: translate(0, -50%);
+    font-size: 18px;
+  }
+  
+  .fc-today {
+    background: #0078d7;
+    color: white;
+  }
+  
+  .fc td,
+  .fc th {
+    border-style: none;
+  }
+  
+  .fc td[data-date] {
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+.carlist {
+  height: 350px;
+  margin-top: 20px;
+  
+  .ms-Table {
+    background: white;
+  }
+}
+
+.graph-container {
+  lost-column: 2.5/6 0;
+  height: calc(45vh - 1em);
+  background: white;
+  margin-bottom: 1em;
+  display: none;
+}
+
+.deliveries-container {
+  lost-column: 3/6 0;
+  height: calc(45vh - 1em);
+  background: white;
+  margin-bottom: 1em;
+  display: none;
+}
+
+.time-widget,
+.weather-widget {
+  lost-column: 1/6 0;
+  height: calc(45vh - 1em);
+  background: white;
+  margin-bottom: 1em;
+  display: none;
+}
+
+.other-container {
+  lost-utility: clearfix;
+  lost-column: 2.5/6 0;
+  height: calc(45vh - 1em);
+  background: white;
+  display: none;
+}
+
+.events-container {
+  lost-column: 2/6 0;
+  height: calc(45vh - 1em);
+  background: white;
+  display: none;
+}
+
+/* COMPONENTS */
+
+/* clock */
+.component-clock {
+  height: 100%;
+  width: 100%;
+/*   max-width: 250px; */
+/*   min-width: 300px; */
+  background: $clock-bg;
+  
+  .container {
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+  }
+  
+  .date-section {
+    lost-row: 1/5;
+    lost-utility: clearfix;
+    width: 100%;
+    position: relative;
+    
+    .numeric-date {
+/*       height: 100%; */
+/*       float: left; */
+      font-size: 4em;
+      color: $font-color;
+      margin-right: 15px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    
+    .month {
+      color: $font-color;
+      font-size: 2em;
+      position: absolute;
+      top: 0;
+      left: 80px;
+    }
+    
+    .day-year {
+      color: $clock-lowlight;
+      font-size: 1.3em;
+      position: absolute;
+      top: 40px;
+      left: 80px;
+    }
+  }
+  
+  .clock-section {
+    lost-row: 3/5;
+    border-top: 4px solid $clock-lowlight;
+    border-bottom: 4px solid $clock-lowlight;
+    position: relative;
+    
+    .clock-face,
+    .clock-center,
+    .hour,
+    .minute,
+    .second {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: top;
+    }
+    
+    .clock-face {
+      width: 180px;
+      height: 80%;
+/*       padding-top: 55%; */
+      max-width: 180px;
+      max-height: 180px;
+      border-radius: 50%;
+      border: 10px solid $clock-highlight;
+      background: $font-color;
+      box-shadow: 0 0 0 5px $clock-lowlight;
+      
+    }
+    
+    .clock-center {
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      border: 2px solid $clock-hand;
+      background: $font-color;
+      z-index: 10;
+    }
+    
+    .hour {
+/*       width: 6px; */
+/*       height: 20%; */
+      padding: 9% 1%;
+      background: $clock-hand;
+      border-radius: 10px;
+      z-index: 1;
+    }
+    
+    .minute {
+      width: 4px;
+      height: 25%;
+      background: $clock-hand;
+      border-radius: 5px;
+      z-index: 1;
+    }
+    
+    .second {
+      width: 3px;
+      height: 30%;
+      background: $clock-highlight;
+      border-radius: 10px;
+      z-index: 2;
+    }
+  }
+  
+  .text-section {
+    lost-row: 1/5;
+    text-align: center;
+    color: $font-color;
+    font-size: 1em;
+    padding-top: 1em;
+  }
+}
+
+/* weather */
+
+.component-weather {
+  width: 100%;
+  height: 100%;
+  background: white;
+  position: relative;
+  
+  .title {
+    lost-row: 1/5;
+    border-bottom: 2px solid $weather-border;
+    font-size: 1.5em;
+    color: $weather-title-grey;
+    position: relative;
+    
+    span {
+      display: block;
+      padding-top: .5em;
+      position: absolute;
+      top: 50%;
+      left: 1em;
+      transform: translate(0, -50%);
+    }
+    
+    span::before {
+      content: '';
+      width: 16px;
+      height: 32px;
+      display: inline-block;
+      background: $weather-title-red;
+      margin-right: 1rem;
+      vertical-align: text-top;
+    }
+  }
+  
+  .weather {
+    lost-row: 3/5;
+    position: relative;
+    
+    .temp-hi {
+      font-size: 4em;
+      color: $weather-temp-hi;
+      font-weight: 600;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    
+    .temp-lo {
+      font-size: 1.5em;
+      color: $weather-temp-lo;
+      position: absolute;
+      top: 50px;
+      left: 100px;
+    }
+    
+    .weather-icon {
+      font-size: 6em;
+      position: absolute;
+      top: 70px;
+      left: 120px;
+      color: $weather-icon;
+    }
+    
+    .forecast {
+      font-size: 1.3em;
+      font-weight: 500;
+      color: $weather-temp-hi;
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+  
+  .location {
+    lost-row: 1/5;
+    background: $weather-bg;
+    border-top: 4px solid $weather-border;
+    text-align: center;
+    padding-top: 25px;
+    font-size: 1.3em;
+    color: $weather-title-grey;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+/* deliveries */
+
+.component-delivery {
+  background: $delivery-bg;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  position: relative;
+  
+  .title {
+    lost-row: 1/6;
+    position: relative;
+    
+    span {
+/*       font-size: 1em; */
+      color: $delivery-title;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+    
+    span::before {
+      content: '';
+      width: 16px;
+      height: 20px;
+      display: inline-block;
+      background: $delivery-title-bar;
+      margin-right: 1rem;
+      vertical-align: center;
+    }
+    
+    button {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0, -50%);
+      font-size: 1.3em;
+      background: none;
+      border: none;
+      color: $delivery-title;
+      font-family: roboto, sans-serif;
+      text-decoration: underline;
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .delivery-list {
+    lost-row: 5/6;
+    overflow-y: auto;
+    overflow-x: hidden;
+    
+    .delivery {
+      background: $delivery-li-bg;
+      padding: 1em 10px;
+      margin-bottom: .5em;
+      position: relative;
+      font-size: 1.1em;
+      color: $delivery-li-font;
+      
+      &:hover {
+        background: $delivery-li-hover;
+        color: white;
+        cursor: pointer;
+        
+        button {
+          color: white;
+        }
+      }
+      
+      span {
+        overflow: hidden;
+        display: block;
+        width: 80%;
+        line-height: 1.3em;
+      }
+    }
+    
+    .controls {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translate(0, -50%);
+      
+      button {
+        background: none;
+        font-size: 1.2em;
+        border: none;
+        color: $delivery-icon-bg;
+        
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      
+      .fa-check:hover {
+        color: lightgreen;
+      }
+      
+      .fa-pencil:hover {
+        color: black;
+      }
+      
+      .fa-trash:hover {
+        color: tomato;
+      }
+    }
+  }
+  
+  .empty {
+    color: $delivery-title;
+    font-size: 2em;
+    font-family: roboto, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* stats */
+
+.component-stats {
+  width: 100%;
+  height: 100%;
+  position: relative;
+/*   background: $stats-bg; */
+/*   border: 1px solid grey; */
+  padding: 1em;
+  lost-utility: clearfix;
+  
+  .title {
+    lost-row: 1/6;
+    position: relative;
+    
+    span {
+      font-size: 1.5em;
+      color: $stats-title;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+    }
+    
+    span::before {
+      content: '';
+      width: 16px;
+      height: 32px;
+      display: inline-block;
+      background: $stats-title-bar;
+      margin-right: 1rem;
+      vertical-align: text-top;
+    }
+  }
+  
+  .graphp {
+    lost-row: 5/6;
+    lost-utility: clearfix;
+    position: relative;
+    width: 100%;
+    height: 80%;
+    background: white;
+  }
+}

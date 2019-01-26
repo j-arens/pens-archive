@@ -1,0 +1,84 @@
+html,
+body {
+    height: 100vh;
+}
+
+body {
+    padding-top: 4em;
+}
+
+.tab-wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+}
+
+.tab-nav {
+    display: flex;
+}
+
+.tab-nav-item {
+    padding: 16px 20px;
+    border-bottom: 1px solid #ccc;
+    
+    &:active {
+        background-color: #bada55;
+    }
+}
+
+.tab-nav-item + .tab-nav-item {
+    border-left: 1px solid #ccc;
+}
+
+.tabs {
+    display: flex;
+    overflow: hidden;
+    // transform: translateX(-100%);
+}
+
+.tab {
+    flex: 0 0 100%;
+    height: 0;
+    // max-width: 400px;
+    // padding: 1em;
+    
+    &:target {
+        height: auto;
+        animation: .2s ease-in 0s 1 fadeIn;
+    }
+}
+
+.tab + .tab {
+    // margin-left: 1px;
+}
+
+.tab-inner {
+    // max-width: 400px;
+    padding: 1em;
+}
+
+// transforms dont work?
+#tab-2:target {
+    // animation: .2s ease-in 0s 1 slideInRight;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

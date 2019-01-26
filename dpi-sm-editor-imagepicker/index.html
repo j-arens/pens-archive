@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.2/css/uikit.min.css" />
+
+<div class="postbox">
+  <div id="dpi-sm-editor-root" class="uk-padding">
+    <!-- menu item type -->
+    <form>
+      <fieldset class="uk-fieldset">
+        <legend class="uk-legend">New Menu Item</legend>
+        <div class="uk-margin">
+          <input class="uk-input" type="text" placeholder="Menu Item Name">
+        </div>
+        <div class="dpi-sm-menu-item-type">
+          <div class="uk-form-label uk-margin-bottom">Menu Item Type</div>
+          <div class="uk-form-controls">
+            <label><input class="uk-radio" type="radio" name="radio1">Custom Link</label>
+            <label><input class="uk-radio" type="radio" name="radio1">Custom Section</label>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <!-- end menu item type -->
+    <hr>
+    <!-- custom section options -->
+    <div class="dpi-sm-custom-section-options">
+      <!-- controls -->
+      <section class="dpi-sm-editor-controls uk-margin-bottom">
+        <div class="uk-button-group">
+          <button class="uk-button uk-button-primary" type="button">+ Add A Column</button>
+          <button class="uk-button uk-button-default">Option</button>
+        </div>
+        <button class="uk-button uk-button-danger uk-align-right">Reset</button>
+      </section>
+      <!-- end controls -->
+      <!-- navbar -->
+      <div class="uk-card uk-card-default uk-background-muted">
+        <div class="uk-position-relative">
+          <nav class="uk-navbar-container">
+            <ul class="uk-navbar-nav">
+              <li>
+                <a href="#" data-id="1">Item</a>
+              </li>
+              <li>
+                <a href="#" data-id="2">Item</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="uk-navbar-dropbar">
+            <div class="dropbar-drag-container uk-column-1-2">
+              <!-- drag column -->
+              <section class="uk-placeholder drag-column">
+                <!-- column controls -->
+                <div class="column-controls">
+                  <div class="uk-button-group">
+                    <button class="uk-button uk-button-primary dropdown-button">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480"><path d="M240 346.6 112.2 142 367.8 142 240 346.6m0 75.4 200-320-400 0 200 320z"/></svg>
+                    </button>
+                    <button class="uk-button uk-button-primary drag-button">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"/></svg>
+                    </button>
+                    <button class="uk-button uk-button-primary delete-button">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <!-- column controls -->
+                <div class="uk-sortable-handle">
+                <!-- Column type selector -->
+                  <div class="uk-panel columnType-selector">
+                    <button class="uk-button uk-button-text back-button">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+                      <h5>Back</h5>
+                    </button>
+                    <h5 class="uk-heading-divider">Column Type</h5>
+                    <div class="uk-form-controls">
+                      <label><input class="uk-radio" type="radio" name="radio1"> Blank</label>
+                      <label><input class="uk-radio" type="radio" name="radio1"> Image</label>
+                      <label><input class="uk-radio" type="radio" name="radio1"> Sub Menu</label>
+                      <label><input class="uk-radio" type="radio" name="radio1"> Search</label>
+                      <label><input class="uk-radio" type="radio" name="radio1"> Shortcode</label>
+                      <label><input class="uk-radio" type="radio" name="radio1"> Raw HTML</label>
+                    </div>
+                </div>
+                <!-- end column type selector -->
+                </div>
+              </section>
+              <!-- end drag column -->
+              <!-- drag column -->
+              <section class="uk-placeholder drag-column blank">
+                <!-- column controls -->
+                <div class="column-controls">
+                  <div class="uk-button-group">
+                    <button class="uk-button uk-button-primary dropdown-button">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480"><path d="M240 346.6 112.2 142 367.8 142 240 346.6m0 75.4 200-320-400 0 200 320z"/></svg>
+                    </button>
+                    <button class="uk-button uk-button-primary drag-button">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"/></svg>
+                    </button>
+                    <button class="uk-button uk-button-primary delete-button">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.4L17.6 5 12 10.6 6.4 5 5 6.4 10.6 12 5 17.6 6.4 19 12 13.4 17.6 19 19 17.6 13.4 12z"/></svg>
+                    </button>
+                  </div>
+                </div>
+                <!-- column controls -->
+                <div class="uk-sortable-handle">
+                  <div class="column-image">
+                    <button class="image-picker">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M5 4v2h14V4H5zm0 10h4v6h6v-6h4l-7-7-7 7z"/></svg>
+                      <span class="uk-text-meta">Click to add an image.</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <!-- end drag column -->
+            </div>
+          </div>
+        </div>
+        <!-- end navbar -->
+      </div>
+    </div>
+    <!-- end custom section options -->
+  </div>
+  <!-- end dpi-sm-root -->
+</div>
+<!-- end postbox -->

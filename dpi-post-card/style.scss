@@ -1,0 +1,191 @@
+@use postcss-cssnext;
+
+@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400i|Roboto');
+
+body {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2em;
+}
+
+#dpiBlog-articleCards__root {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 1em;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  
+  * {
+    box-sizing: inherit;
+    
+    &::before,
+    &::after {
+      box-sizing: inherit;
+    }
+  }
+}
+
+.dpiBlog-articleCards__ {
+  &article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border-radius: 4px;
+    margin-bottom: 2em;
+    box-shadow: 0 0 5px 1px rgba(59, 59, 59, 0.2);
+    
+    &:not(:first-of-type) {
+      display: none;
+    }
+  }
+  
+  &article + &article {
+    margin-left: 2em;
+  }
+  
+  &figure,
+  &content {
+    flex-basis: 50%;
+  }
+  
+  &figure-img {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.825;
+  }
+  
+  &content {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em;
+    color: rgba(59, 59, 59, 0.7);
+  }
+  
+  &title {
+    text-align: center;
+    font-family: 'Droid Serif', serif;
+    line-height: 1.3;
+    font-size: 1.25em;
+    margin: 0 0 1rem 0;
+  }
+  
+  &rule {
+    border: none;
+    height: 1px;
+    background: rgba(59, 59, 59, 0.2);
+    margin: 0 0 1em 0;
+  }
+  
+  &excerpt {
+    display: none;
+    position: relative;
+    line-height: 1.35;
+    word-spacing: 0.1em;
+    margin: 0 0 1rem 0;
+    overflow: hidden;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2em;
+      background: linear-gradient(transparent 0%, #fff 100%);
+    }
+  }
+  
+  &link {
+    font-family: 'Droid Serif', serif;
+    color: inherit;
+    text-decoration: none;
+    margin: auto auto 0 auto;
+    
+    &:hover {
+      & > svg {
+        fill: currentColor;
+      }
+    }
+  }
+  
+  &link-icon {
+    pointer-events: none;
+    display: inline-block;
+    vertical-align: top;
+    fill: rgba(59, 59, 59, 0.7);
+    width: 1em;
+    height: 1em;
+    margin: 0 0 0 .25em;
+    transform: skewX(-7deg);
+  }
+  
+  @media screen and (min-width: 400px) {
+    &article {
+      height: 400px;
+    }
+    
+    &figure-img {
+      height: 100%;
+    }
+    
+    &rule {
+      margin: 0 0 0.5em 0;
+    }
+    
+    &title {
+      margin: 0 0 0.5rem 0;
+    }
+    
+    &excerpt {
+      display: block;
+    }
+  }
+  
+  @media screen and (min-width: 590px) {
+    &article {
+      width: 550px;
+      flex-direction: row;
+      transition: all .2s ease-in;
+    
+      &:hover {
+        transform: scale(1.0125);
+        box-shadow: 2px 1px 10px 2px rgba(59, 59, 59, 0.2);
+      }
+    }
+    
+    &rule {
+      margin: 0 0 1em 0;
+    }
+    
+    &title {
+      margin: 0 0 1rem 0;
+    }
+    
+    &excerpt::after {
+      height: 4em;
+      background: linear-gradient(transparent 0%, #fff 90%);
+    }
+  }
+  
+  @media screen and (min-width: 1180px) {
+    &article:nth-of-type(2) {
+      display: flex;
+    }
+  }
+  
+  @media screen and (min-width: 1750px) {    
+    &article:nth-of-type(n+0) {
+      display: flex;
+    }
+  }
+}
+

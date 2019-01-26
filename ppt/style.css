@@ -1,0 +1,110 @@
+@use postcss-nested;
+@use postcss-simple-vars;
+
+@use postcss-nested;
+@use postcss-simple-vars;
+ 
+
+/* BASIC */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+/*   width: 100%; */
+/*   height: 100%; */
+  overflow-x: hidden;
+  margin: 0;
+}
+
+/* FORM */
+
+form {
+  font-family: 'PT Serif', serif;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.5em;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding: 2em 2em 0 2em;
+}
+
+.skill {
+  font-size: 1.3em;
+}
+
+input[type="checkbox"] {
+  margin-right: 1em;
+}
+
+input[type="submit"] {
+  position: absolute;
+  bottom: 130px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: .5em 1em;
+  font-size: 2em;
+  background: none;
+  border: 1px sold black !important;
+  visibility: hidden;
+}
+
+li {
+  margin: 1.5em 0;
+}
+
+legend {
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 2.5em;
+  margin-bottom: .5em;
+}
+
+fieldset {
+  width: 100vw;
+  height: 100%;
+  border-top: 4px solid black;
+  transition: all .5s ease;
+  position: absolute;
+}
+
+/* NAV */
+
+nav {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+button {
+  background: none;
+/*   border: none; */
+  
+  &:focus {
+    outline: none;
+  }
+  
+  &:hover {
+    cursor: pointer;
+  }
+  
+  span {
+    font-size: 2em;
+    vertical-align: middle;
+    padding: 0 .5em;
+  }
+}
+
+.fa {
+  font-size: 4em;
+  vertical-align: middle;
+}
+
+/* MODIFIERS */
+
+.visible {
+  left: 0 !important;
+}

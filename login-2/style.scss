@@ -1,0 +1,98 @@
+/*
+BASE STYLES
+*/
+
+$color-1: #F2D639;
+$color-2: #F66B34;
+$color-3: #383838;
+$color-4: #5D697A;
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300italic,600,700);
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: open sans, sans-serif;
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/432525/geometry.png);
+}
+
+/*
+LOG IN FORM STYLES
+*/
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  form {
+    border: 2px solid $color-1;
+    box-shadow: 0 5px 20px 1px #ccc;
+    min-width: 350px;
+    // height: 500px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    justify-content: space-around;
+    align-items: center;
+   
+  
+    label {
+      font-size: 1.5em;
+      align-self: flex-start;
+      margin-left: 15px;
+      padding: 20px 0;
+    }
+  
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+      height: 30px;
+      width: 90%;
+      font-size: 1.2em;
+      padding: 10px 0;
+      // margin: 0 auto 30px auto ;
+      border: none;
+      border-bottom: 1px solid black;
+      // line-height: -20px;
+      vertical-aling: baseline;
+    
+      &:focus {
+        outline: none;
+      }
+    }
+    
+    input[type="submit"] {
+      align-self: center;
+      width: 90%;
+      height: 45px;
+      background: none;
+      border: 1px solid black;
+      font-size: 1em;
+      margin: 20px 0;
+ 
+    
+      &:hover {
+        // background: green;
+        // color: white;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .options-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    
+    a {
+      font-size: .95em;
+      color: black;
+    }
+  }
+}

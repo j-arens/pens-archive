@@ -1,0 +1,423 @@
+@use lost;
+@use postcss-nested;
+@use postcss-simple-vars;
+
+@lost gutter 0px;
+@lost flexbox no-flex;
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Montserrat+Subrayada:700);
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: #eee;
+}
+
+
+
+/**** COLORS ****/
+
+
+
+/* block color */
+$fill: #f9f9f9;
+$white: #ffffff;
+
+$complimentary: #358ed7;
+$complimentary-2: #39add1;
+$accent: #7dc855;
+
+$heading: #43484d;
+$link: #86939e;
+$paragraph: #86939e;
+$tag: #86939e;
+
+$price-table-description: #86939e;
+$available-txt: #5e6977;
+$unavailable-txt: #bfc7ce;
+$x-icon: tomato;
+
+$border: #e1e8ee;
+
+$box-shadow: 0px 2px 6px -2px black;
+
+
+
+/**** TYPOGRAPHY ****/
+
+
+
+h1 {
+  color: $heading;
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 58px;
+  margin-bottom: 2rem;
+  letter-spacing: -2px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  color: $heading;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 400;
+  color: $paragraph;
+/*   margin-bottom: 1rem; */
+}
+
+.subheader {
+  display: block;
+  color: $heading;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0 auto 3rem auto;
+}
+
+.tag {
+  display: block;
+  color: $tag;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-bottom: 2em;
+  text-align: center;
+}
+
+
+
+/**** PAGE BUILDER ****/
+
+
+
+#page-builder {
+  
+  .wrapper {
+    width: 100%;
+    height: 100vh;
+/*     max-width: 1440px; */
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  
+  .modal {
+    margin: 2em;
+    padding: 1em;
+    background: $white;
+    box-shadow: $box-shadow;
+    position: relative;
+    overflow: visible !important;
+    lost-utility: clearfix;
+  }
+  
+  .modal-half {
+    min-height: 385px;
+    width: calc(50% - 4em);
+    float: left;
+    
+    li {
+      float: left;
+      margin: 0 2em 4em 2em;
+      width: calc(50% - 4em);
+      position: relative;
+    }
+    
+    #section-info {
+      margin-top: -2em;
+      margin-bottom: 0;
+      max-height: 160px;
+      overflow-y: auto;
+    }
+  }
+  
+  .inner-modal-container {
+    width: 100%;
+    height: 100%;
+    lost-utility: clearfix;
+  }
+  
+  .inner-modal {
+    background: white;
+    min-height: 150px;
+    border: 1px solid $border;
+    box-shadow: $box-shadow;
+    position: relative;
+  }
+  
+  .inner-modal-lg {
+    padding: 2em;
+    float: left;
+    margin: 0 2em 4em 2em;
+    width: calc(50% - 4em);
+    min-height: 50px;
+    
+    input {
+      margin-bottom: 2em;
+    }
+  }
+  
+  .inner-modal-md {
+    padding: 1em;
+    margin-bottom: 2em;
+    
+    select,
+    input {
+      margin-bottom: 2em;
+    }
+    
+    select {
+      max-width: 90%;
+    }
+  }
+  
+  .field-options {
+    border: 2px solid $border;
+    padding: .5em;
+    margin-bottom: 2em;
+    
+    input {
+      background: transparent;
+    }
+  }
+  
+  
+  
+/**** FORMS ****/
+
+
+
+  form {
+    lost-utility: clearfix;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 1em;
+    position: relative;
+  }
+
+  select {
+    margin-top: .5em;
+    position: relative;
+
+    option {
+      padding: .25em .25em .25em 0;
+    }
+  }
+
+  input,
+  select {
+    width: 100%;
+    padding: .25em .25em .25em 0;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid $border;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input[type="range"] {
+    appearance: none;
+    padding: 0;
+    color: $border;
+    background-color: $border;
+    height: 1px;
+  }
+
+  input[type="range" i] {
+    background: pink;
+  }
+
+  datalist {
+    display: block;
+    width: 100%;
+
+    option {
+      display: inline-block;
+      width: 20%;
+      font-size: 14px;
+      margin-left: -4px;
+      padding-left: 4px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:nth-child(2) {
+        padding-left: 14px;
+      }
+
+      &:nth-child(3) {
+        padding-left: 22px;
+      }
+
+      &:nth-child(4) {
+        padding-left: 32px;
+      }
+
+      &:nth-child(5) {
+        padding-left: 42px;
+      }
+    }
+  }
+  
+  
+/**** TYPOGORAPHY ****/
+
+  
+ 
+  .titlebar {
+    display: block;
+    color: white;
+    box-shadow: $box-shadow;
+    position: relative;
+    padding: .5em 0 .5em 1em;
+  }
+
+  .titlebar-lg {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 32px;
+    margin: 0 auto 3rem auto;
+    min-height: 54px;
+    width: calc(100% + 2em);
+    background: $complimentary;
+    margin-left: -1rem;
+  }
+
+  .titlebar-md {
+    min-height: 35px;
+    background: #838cc7;
+    width: calc(100% + 4em);
+    margin: -2em 0 2em -2em;
+  }
+
+  .titlebar-sm {
+    background: #53bbb3;
+    width: calc(100% + 2em);
+    margin-left: -1em;
+    top: -1em;
+  }
+
+  .titlebar-xs {
+    color: black;
+    width: calc(100% + 1em);
+    background: #eee;
+    margin: 0 0 1em -.5em;
+    top: -.5em;
+  }
+  
+  
+  
+  /**** BUTTON STYLES ****/
+
+  
+  
+  .toggle-btn {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    padding: 0;
+    background: transparent;
+    position: absolute;
+    right: 2em;
+    top: 25%;
+    cursor: pointer;
+  }
+
+  .toggle-btn-lg {
+    border: 10px solid transparent;
+    border-bottom-color: white;
+  }
+
+  .toggle-btn-md {
+    border: 10px solid transparent;
+    border-bottom-color: white;
+  }
+
+  .toggle-btn-sm {
+    border: 8px solid transparent;
+    border-bottom-color: white;
+  }
+
+  .toggle-btn-xs {
+    border: 7px solid transparent;
+    border-bottom-color: black;
+  }
+  
+  .add-comp-btn {
+    position: absolute;
+    right: 0;
+    top: 2.55em;
+  }
+  
+  #add-element-btn {
+    position: absolute;
+    right: 0;
+    bottom: 2.25em;
+  }
+  
+  .divider {
+    width: 100%;
+    height: 0;
+    lost-utility: clearfix;
+  }
+  
+  #add-sect-btn {
+    position: absolute;
+    bottom: 2em;
+    left: 3.5em;
+  }
+  
+  #add-field-btn {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+  }
+  
+  .delete-element-btn {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translate(0, -50%);
+  }
+  
+  .next-btn {
+  position: absolute;
+  bottom: 2em;
+  left: 48px;
+  padding: .5em 1em;
+  border: 1px solid $accent;
+  background: white;
+}
+  
+}
+/* end page builder */
+

@@ -1,0 +1,143 @@
+<div id="dpi-admin-root">
+  <main>
+    <div id="appbar">
+      <nav>
+        <div class="btn-group">
+          <button id="new-option" role="button" class="btn btn-primary">+ New Component</button>
+          <button role="button" class="btn btn-default">Collapse All</button>
+          <button role="button" class="btn btn-default">Expand All</button>
+        </div>
+      </nav>
+      <button id="save-submit" role="button" class="btn btn-primary">Save Settings</button>
+    </div>
+    <nav id="side-nav">
+      <div class="brand">
+        <span><b>Ava</b>Assistant</span>
+        <ul class="menu">
+          <li><i class="zmdi zmdi-settings"></i>Settings</li>
+          <li><i class="zmdi zmdi-edit"></i><span>Header<span></li>
+          <li><i class="zmdi zmdi-edit"></i><span>Homepage</span></li>
+        </ul>
+        <button type="button" class="btn btn-default">Toggle Menu Editor</button>
+      </div>
+    </nav>
+    <div id="innercontainer">
+      <div id="options-page">
+        <div class="card option">
+          <div class="card-head option-bar">
+            <p class="card-head-title">Church About</p>
+            <div class="flex-wrapper">
+              <div class="btn-group">
+                <button role="button" class="btn btn-default">+ New Element</button>
+                <button role="button" class="btn btn-default">+ New Field</button>
+                <button role="button" class="btn btn-ghost"><i class="zmdi zmdi-chevron-up"></i></button>
+              </div>
+              <button role="button" class="btn btn-warn">X</button>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="option-container">
+              <h3 class="component-heading">General Info</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      <span>Field Name</span>
+                    </th>
+                    <th>
+                      <span>Input</span>
+                    </th>
+                    <th>
+                      <span>Get Function</span>
+                    </th>
+                    <th>
+                      <span>Options</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Title</td>
+                    <td><input type="text" /></td>
+                    <td><code>get_option( "ava_church_about_text_48" );</code></td>
+                    <td><button role="button" class="btn btn-warn">Delete</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="option-container">
+              <h3 class="component-heading">Icon Boxes</h3>
+              <div class="tabs">
+                <nav class="tablist">
+                  <!--                 <span class="backward"><i class="zmdi zmdi-forward"></i></span> -->
+                  <ul class="tab-menu">
+                    <li class="active-tab">Icon Box 1</li>
+                    <li>Icon Box 2</li>
+                    <li>Icon Box 3</li>
+                    <li>Icon Box 4</li>
+                  </ul>
+                  <!--                 <span class="forward"><i class="zmdi zmdi-forward"></i></span> -->
+                </nav>
+                <ul class="tabs-container">
+                  <li class="tab-panel">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>
+                            <span>Field Name</span>
+                          </th>
+                          <th>
+                            <span>Input</span>
+                          </th>
+                          <th>
+                            <span>Get Function</span>
+                          </th>
+                          <th>
+                            <span>Options</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Title</td>
+                          <td><input type="text" /></td>
+                          <td><code>get_option( "ava_church_about_text_48" );</code></td>
+                          <td><button role="button" class="btn btn-warn">Delete</button></td>
+                        </tr>
+                        <tr>
+                          <td>HomeTown</td>
+                          <td><input type="text" /></td>
+                          <td><code>get_option( "ava_church_about_text_148" );</code></td>
+                          <td><button role="button" class="btn btn-warn">Delete</button></td>
+                        </tr>
+                        <tr>
+                          <td>Description</td>
+                          <td class="textarea-container"><textarea></textarea></td>
+                          <td><code>get_option( "ava_church_about_textArea_223" );</code></td>
+                          <td><button role="button" class="btn btn-warn">Delete</button></td>
+                        </tr>
+                        <tr>
+                          <td>Background Image</td>
+                          <td class="image-container">
+                            <div class="image-upld">
+                              <div class="img"></div>
+                              <button role="button" class="btn btn-default">Upload Image</button>
+                              <button role="button" class="btn btn-default">Remove Image</button>
+                            </div>
+                          </td>
+                          <td><code>get_option( "ava_church_about_Image_328" );</code></td>
+                          <td><button role="button" class="btn btn-warn">Delete</button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

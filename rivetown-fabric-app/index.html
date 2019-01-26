@@ -1,0 +1,390 @@
+<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.min.css">
+<link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.2.0/fabric.components.min.css">
+
+<!-- Dashboard for detail app -->
+
+<nav class="sidebar-nav ms-font-m-plus ms-fontWeight-semibold">
+  <ul>
+    <li class="active">
+      <div class="icon-container">
+        <i class="ms-Icon ms-Icon--home" aria-hidden="true"></i>
+      </div>
+      <div class="text-container">
+        <span>Dashboard</span>
+      </div>
+    </li>
+    <li>
+      <div class="icon-container">
+        <i class="ms-Icon ms-Icon--key" aria-hidden="true"></i>
+      </div>
+      <div class="text-container">
+        <span>Car Deliveries</span>
+      </div>
+    </li>
+    <li>
+      <div class="icon-container">
+        <i class="ms-Icon ms-Icon--listCheck" aria-hidden="true"></i>
+      </div>
+      <div class="text-container">
+        <span>Checklist</span>
+      </div>
+    </li>
+    <li>
+      <div class="icon-container">
+        <i class="ms-Icon ms-Icon--plus" aria-hidden="true"></i>
+      </div>
+      <div class="text-container">
+        <span>Detail Supplies</span>
+      </div>
+    </li>
+    <li>
+      <div class="icon-container">
+        <i class="ms-Icon ms-Icon--scheduling" aria-hidden="true"></i>
+      </div>
+      <div class="text-container">
+        <span>Schedule</span>
+      </div>
+    </li>
+    <li>
+      <div class="icon-container">
+        <i class="ms-Icon ms-Icon--graph" aria-hidden="true"></i>
+      </div>
+      <div class="text-container">
+        <span>Statistics</span>
+      </div>
+    </li>
+    <li>
+      <div class="icon-container">
+        <i class="ms-Icon ms-Icon--gear" aria-hidden="true"></i>
+      </div>
+      <div class="text-container">
+        <span>Settings</span>
+      </div>
+    </li>
+    <li>
+      <div class="icon-container">
+        <i class="ms-Icon ms-Icon--question" aria-hidden="true"></i>
+      </div>
+      <div class="text-container">
+        <span>About</span>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="dashboard">
+  <div class="ms-Grid">
+    <!--   ROW    -->
+    <div class="quick-tasks ms-Grid-row">
+      <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2">
+        <div class="task">
+          <i class="ms-Icon ms-Icon--key"></i>
+          <span class="ms-font-m">New Delivery</span>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2">
+        <div class="task">
+          <i class="ms-Icon ms-Icon--plus"></i>
+          <span class="ms-font-m">Order Supplies</span>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2">
+        <div class="task">
+          <i class="ms-Icon ms-Icon--wrench"></i>
+          <span class="ms-font-m">Assign Job</span>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2">
+        <div class="task">
+          <i class="ms-Icon ms-Icon--calendarPublic"></i>
+          <span class="ms-font-m">See Schedule</span>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2">
+        <div class="task">
+          <i class="ms-Icon ms-Icon--listCheck"></i>
+          <span class="ms-font-m">Checklist</span>
+        </div>
+      </div>
+      <div class="ms-Grid-col ms-u-sm6 ms-u-md4 ms-u-lg2">
+        <div class="task">
+          <i class="ms-Icon ms-Icon--mapMarker"></i>
+          <span class="ms-font-m">Track Job</span>
+        </div>
+      </div>
+    </div>
+    <!--  END ROW    -->
+    <!--  BEGIN ROW    -->
+    <div class="ms-Grid-row">
+      <div class="ms-Grid-col ms-u-lg6 delivery-container">
+        <ul class="ms-List">
+          <li class="ms-ListItem is-unread is-selectable">
+            <span class="ms-ListItem-primaryText">New car delivery</span>
+            <span class="ms-ListItem-secondaryText">Kim Berends - Delivery @ 3:00PM</span>
+            <span class="ms-ListItem-tertiaryText">2016 Honda Odyssey #JPG12H4879</span>
+            <span class="ms-ListItem-metaText">2:42p</span>
+            <div class="ms-ListItem-selectionTarget js-toggleSelection"></div>
+            <div class="ms-ListItem-actions">
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--check"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--trash"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--flag"></i></div>
+            </div>
+          </li>
+          <li class="ms-ListItem is-unread is-selectable">
+            <span class="ms-ListItem-primaryText">New car delivery</span>
+            <span class="ms-ListItem-secondaryText">Jon Malkin - Delivery @ 4:15PM</span>
+            <span class="ms-ListItem-tertiaryText">2016 Honda Civic #LMNQ45T6419</span>
+            <span class="ms-ListItem-metaText">9:37</span>
+            <div class="ms-ListItem-selectionTarget js-toggleSelection"></div>
+            <div class="ms-ListItem-actions">
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--check"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--trash"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--flag"></i></div>
+            </div>
+          </li>
+          <li class="ms-ListItem is-unread is-selectable">
+            <span class="ms-ListItem-primaryText">Used car delivery</span>
+            <span class="ms-ListItem-secondaryText">Sam Fernel - delivery @ 4:45PM</span>
+            <span class="ms-ListItem-tertiaryText">2007 Chevrolet Silverado #HTY13M4590</span>
+            <span class="ms-ListItem-metaText">8:44</span>
+            <div class="ms-ListItem-selectionTarget js-toggleSelection"></div>
+            <div class="ms-ListItem-actions">
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--check"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--trash"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--flag"></i></div>
+            </div>
+          </li>
+          <li class="ms-ListItem is-unread is-selectable">
+            <span class="ms-ListItem-primaryText">New car delivery</span>
+            <span class="ms-ListItem-secondaryText">Kevin Veletema - delivery @ 5:10PM</span>
+            <span class="ms-ListItem-tertiaryText">2016 Honda CRV #REW345M2048</span>
+            <span class="ms-ListItem-metaText">7:32</span>
+            <div class="ms-ListItem-selectionTarget js-toggleSelection"></div>
+            <div class="ms-ListItem-actions">
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--check"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--trash"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--flag"></i></div>
+            </div>
+          </li>
+          <li class="ms-ListItem is-unread is-selected is-selectable">
+            <span class="ms-ListItem-primaryText">Used car delivery</span>
+            <span class="ms-ListItem-secondaryText">Zach Degraaf - delivery @ 5:30PM</span>
+            <span class="ms-ListItem-tertiaryText">2013 Hyundai Sonata #GTY43K1843</span>
+            <span class="ms-ListItem-metaText">3:10</span>
+            <div class="ms-ListItem-selectionTarget js-toggleSelection"></div>
+            <div class="ms-ListItem-actions">
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--check"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--trash"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--flag"></i></div>
+            </div>
+          </li>
+          <li class="ms-ListItem is-unread is-selectable">
+            <span class="ms-ListItem-primaryText">Used car delivery</span>
+            <span class="ms-ListItem-secondaryText">Jane Vermaat - delivery @ 6:00PM</span>
+            <span class="ms-ListItem-tertiaryText">2014 Honda CRV #TYU43K6129</span>
+            <span class="ms-ListItem-metaText">2:42p</span>
+            <div class="ms-ListItem-selectionTarget js-toggleSelection"></div>
+            <div class="ms-ListItem-actions">
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--check"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--trash"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--flag"></i></div>
+            </div>
+          </li>
+          <li class="ms-ListItem is-selectable"><span class="ms-ListItem-primaryText">Alton Lafferty</span> <span class="ms-ListItem-secondaryText">Meeting notes</span> <span class="ms-ListItem-tertiaryText">Today we discussed the importance of a, b, and c in regards to d.</span> <span class="ms-ListItem-metaText">2:42p</span>
+            <div class="ms-ListItem-selectionTarget js-toggleSelection"></div>
+            <div class="ms-ListItem-actions">
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--check"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--trash"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--flag"></i></div>
+            </div>
+          </li>
+          <li class="ms-ListItem is-selectable"><span class="ms-ListItem-primaryText">Alton Lafferty</span> <span class="ms-ListItem-secondaryText">Meeting notes</span> <span class="ms-ListItem-tertiaryText">Today we discussed the importance of a, b, and c in regards to d.</span> <span class="ms-ListItem-metaText">2:42p</span>
+            <div class="ms-ListItem-selectionTarget js-toggleSelection"></div>
+            <div class="ms-ListItem-actions">
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--check"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--trash"></i></div>
+              <div class="ms-ListItem-action"><i class="ms-Icon ms-Icon--flag"></i></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!--   END DELIVERY CONTAINER    -->
+      <div class="ms-Grid-col ms-u-lg6 calendar-container">
+        <div id="calendar" class="ms-font-m"></div>
+      </div>
+    </div>
+    <!--   END ROW   -->
+  </div>
+  <div class="ms-Grid-row">
+    <div class="ms-Grid-col ms-u-lg12 carlist">
+      <div class="ms-Table">
+        <div class="ms-Table-row"><span class="ms-Table-rowCheck"></span> <span class="ms-Table-cell">File name</span> <span class="ms-Table-cell">Location</span> <span class="ms-Table-cell">Modified</span> <span class="ms-Table-cell">Type</span></div>
+        <div class="ms-Table-row"><span class="ms-Table-rowCheck"></span> <span class="ms-Table-cell">File name</span> <span class="ms-Table-cell">Location</span> <span class="ms-Table-cell">Modified</span> <span class="ms-Table-cell">Type</span></div>
+        <div class="ms-Table-row"><span class="ms-Table-rowCheck"></span> <span class="ms-Table-cell">File name</span> <span class="ms-Table-cell">Location</span> <span class="ms-Table-cell">Modified</span> <span class="ms-Table-cell">Type</span></div>
+        <div class="ms-Table-row is-selected"><span class="ms-Table-rowCheck"></span> <span class="ms-Table-cell">File name</span> <span class="ms-Table-cell">Location</span> <span class="ms-Table-cell">Modified</span> <span class="ms-Table-cell">Type</span></div>
+        <div class="ms-Table-row"><span class="ms-Table-rowCheck"></span> <span class="ms-Table-cell">File name</span> <span class="ms-Table-cell">Location</span> <span class="ms-Table-cell">Modified</span> <span class="ms-Table-cell">Type</span></div>
+        <div class="ms-Table-row"><span class="ms-Table-rowCheck"></span> <span class="ms-Table-cell">File name</span> <span class="ms-Table-cell">Location</span> <span class="ms-Table-cell">Modified</span> <span class="ms-Table-cell">Type</span></div>
+      </div>
+    </div>
+    <!--   END ROW   -->
+  </div>
+  <!--  END MS GRID  -->
+  <div class="row">
+    <div class="deliveries-container">
+      <!--   BEGIN DELIVERY COMPONENT     -->
+
+      <div class="component-delivery">
+        <div class="title ">
+          <span class="ms-font-xl ms-fontWeight-semibold">wednesday deliveries</span>
+          <button>See More <i class="ms-Icon ms-Icon--arrowRight" aria-hidden="true"></i></button>
+        </div>
+        <div class="delivery-list">
+          <ul class="ms-font-m">
+            <li class="delivery" data-stock="E789GJ3456">
+              <span>Greg - 2016 Honda Odyssey #E789GJ3456 @ 9:30 AM</span>
+              <div class="controls">
+                <button class="check"><i class="ms-Icon ms-Icon--check" aria-hidden="true"></i>
+                <button class="edit"><i class="ms-Icon ms-Icon--pencil" aria-hidden="true"></i></button>
+                <button class="trash"><i class="ms-Icon ms-Icon--trash" aria-hidden="true"></i></i></button>
+              </div>
+            </li>
+            <li class="delivery" data-stock="PLO56K345">
+              <span>Kim - 2007 Hyundia Sontata #PLO56K345 @ 11:00 AM</span>
+              <div class="controls">
+                <button class="check"><i class="ms-Icon ms-Icon--check" aria-hidden="true"></i>
+                <button class="edit"><i class="ms-Icon ms-Icon--pencil" aria-hidden="true"></i></button>
+                <button class="trash"><i class="ms-Icon ms-Icon--trash" aria-hidden="true"></i></i></button>
+              </div>
+            </li>
+            <li class="delivery" data-stock="JPLG3456A">
+              <span>Joe - 2016 Honda Civic #JPLG3456A @ 11:45 AM</span>
+              <div class="controls">
+                <button class="check"><i class="ms-Icon ms-Icon--check" aria-hidden="true"></i>
+                <button class="edit"><i class="ms-Icon ms-Icon--pencil" aria-hidden="true"></i></button>
+                <button class="trash"><i class="ms-Icon ms-Icon--trash" aria-hidden="true"></i></i></button>
+              </div>
+            </li>
+            <li class="delivery" data-stock="JGE456A7812">
+              <span>Jane - 2015 Honda Accord #JGE456A7812 @ 1:00 PM</span>
+              <div class="controls">
+                <button class="check"><i class="ms-Icon ms-Icon--check" aria-hidden="true"></i>
+                <button class="edit"><i class="ms-Icon ms-Icon--pencil" aria-hidden="true"></i></button>
+                <button class="trash"><i class="ms-Icon ms-Icon--trash" aria-hidden="true"></i></i></button>
+              </div>
+            </li>
+            <li class="delivery" data-stock="E789GJ3456">
+              <span>Kate - 2008 Jeep Grand Cherokee #E789GJ3456 @ 2:30 PM</span>
+              <div class="controls">
+                <button class="check"><i class="ms-Icon ms-Icon--check" aria-hidden="true"></i>
+                <button class="edit"><i class="ms-Icon ms-Icon--pencil" aria-hidden="true"></i></button>
+                <button class="trash"><i class="ms-Icon ms-Icon--trash" aria-hidden="true"></i></i></button>
+              </div>
+            </li>
+            <li class="delivery" data-stock="E789GJ3456">
+              <span>Greg - 2016 Honda Odyssey #E789GJ3456 @ 9:30 AM</span>
+              <div class="controls">
+                <button class="check"><i class="ms-Icon ms-Icon--check" aria-hidden="true"></i>
+                <button class="edit"><i class="ms-Icon ms-Icon--pencil" aria-hidden="true"></i></button>
+                <button class="trash"><i class="ms-Icon ms-Icon--trash" aria-hidden="true"></i></i></button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--    END DELIVERY COMPONENT    -->
+    </div>
+
+    <div class="events-container"></div>
+
+    <div class="time-widget">
+      <!-- BEGIN CLOCK COMPONENT -->
+
+      <div class="component-clock">
+        <div class="container">
+
+          <div class="date-section">
+            <span class="numeric-date">13</span>
+            <span class="month">november</span>
+            <span class="day-year">wednesday | 2016</span>
+          </div>
+
+          <div class="clock-section">
+            <div class="clock-face"></div>
+            <div class="clock-center"></div>
+            <div class="hour"></div>
+            <div class="minute"></div>
+            <div class="second"></div>
+          </div>
+
+          <div class="text-section">
+            <span>Lorem ipsum dolor sit amet</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- END CLOCK COMPENENT -->
+    </div>
+  </div>
+  <!--  END ROW  -->
+
+  <!--  ROW  -->
+  <div class="row">
+    <div class="other-container"></div>
+    <div class="graph-container">
+      <!--  BEGIN STATS COMPONENT  -->
+      <div class="component-stats">
+        <div class="title">
+          <span>Detail Statistics</span>
+        </div>
+        <div class="graphp">
+        </div>
+      </div>
+      <!--  END STATS COMPONENT  -->
+    </div>
+    <div class="weather-widget">
+      <!-- BEGIN WEATHER COMPONENT -->
+
+      <div class="component-weather">
+        <div class="title">
+          <span>local weather</span>
+        </div>
+        <div class="weather">
+          <div class="temp">
+            <span class="temp-hi">65&deg;</span>
+            <span class="temp-lo">40&deg;</span>
+            <div class="weather-icon">
+              <i class="wi wi-day-rain-mix"></i>
+            </div>
+            <div class="forecast">
+              <span>light showers</span>
+            </div>
+          </div>
+        </div>
+        <div class="location">
+          <span>Wyoming, MI 49509</span>
+        </div>
+      </div>
+
+      <!-- END WEATHER COMPONENT -->
+    </div>
+  </div>
+  <!--  END ROW  -->
+</div>
+
+<!-- OVERVIEW OF CARS DETAILED / TIMELINE / GRAPH -->
+
+<!-- WEATHER/TIME? -->
+
+<!-- SHIFT CALENDAR? -->
+
+<!-- UPCOMING DELIVERIES -->
+
+<!-- TASKS LIST? -->
+
+<!-- CHANGE ALL ICONS TO FA -->
+
+<!-- ADD HIGHLIGHT COLOR TO CURRENT NAV ITEM -->
+
+<!-- ADD NUMBER OF DELIVERIES/DAY TO TITLE  -->

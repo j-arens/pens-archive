@@ -1,0 +1,451 @@
+// https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css
+
+@use lost;
+@use postcss-nested;
+@use postcss-simple-vars;
+
+@lost gutter 2em;
+@lost flexbox no-flex;
+
+/**** COLORS ****/
+
+$color-primary: #4d5e70;
+$color-primary-lt: #0097d6;
+$color-primary-xlt: #00bff3;
+
+$color-neutral: #f5f5f5;
+$color-black: #4d4d4d;
+$color-white: white;
+
+/* UI */
+$color-border: #d4d4d4;
+$color-icon: #9aa4a7;
+
+/* Accents */
+$color-accent-green: #11ee8e;
+$color-accent-blue: #00bff3;
+$color-accent-orange: #f16421;
+$color-accent-yellow: #fdc100;
+
+$color-text-disabled: #7e8d94;
+
+.warning {
+  background: $color-accent-orange;
+  color: $color-white;
+}
+
+$color-warning: $color-accent-orange;
+
+.alert {
+  background: #e9221d;
+  color: $color-white;
+}
+
+$color-alert: #e9221d;
+
+.success {
+  background: #8cc63f;
+  color: $color-white;
+}
+
+$color-success: #8cc63f;
+
+/* box shadow */
+
+$box-shadow: 0px 0px 1px 0px rgba(117,117,117,1);
+
+/**** TYPOGRAPHY ****/
+
+/**
+*
+* - Scalar type -
+*
+* Scale: 1.250 / major third
+* Base: 16px
+* top level components set font size in rem
+* borders in px
+* everything else in em's
+*
+*/
+
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
+
+:root {
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(0.4em + 0.5vw);
+}
+
+body {
+  background-color: white;
+  font-weight: 400;
+  line-height: 1.45;
+  color: #4d4d4d;
+}
+
+p {
+  margin-bottom: 1.3em;
+  font-size: 1em;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.441em;
+}
+
+h2 {
+  font-size: 1.953em;
+}
+
+h3 {
+  font-size: 1.563em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+small,
+.font_small {
+  font-size: 0.8em;
+}
+
+em {
+  font-style: italic;
+}
+
+strong {
+  font-weight: bold;
+}
+
+/**** LAYOUT ****/
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+body {
+  background: $color-neutral;
+}
+
+section {
+  width: 100%;
+  min-height: 100%;
+  height: auto;
+  display: flex;
+}
+
+/* TOP NAV */
+
+#top-nav {
+  display: flex;
+  background: $color-white;
+  border-bottom: 1px solid $color-border;
+  height: 4em;
+  position: relative;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2em;
+  margin-bottom: 2em;
+  
+  .page-title {
+    margin: 0 2em 0 0;
+  }
+  
+  ul {
+    margin-right: auto;
+  }
+  
+  li {
+    display: inline-block;
+    margin: 0 1em;
+    cursor: pointer;
+    padding-top: .5em;
+    
+    &:first-child {
+      margin-left: 0;
+    }
+    
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  
+  .zmdi {
+    margin-right: .5em;
+  }
+}
+
+/* TITLEBAR */
+
+.titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+  background: $color-white;
+  border-bottom: 1px solid $color-border;
+  height: 4em;
+  position: relative;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 2em;
+  
+  .page-title {
+    margin: 0;
+  }
+}
+
+/* SIDE NAV */
+
+#side-nav {
+/*   flex: 0 0 15em; */
+  width: 15em;
+  position: fixed;
+  background: $color-primary;
+  min-height: 100%;
+  font-size: 1rem;
+  display: inline-block;
+  
+  .logo-box {
+    display: block;
+    background: $color-primary-xlt;
+    width: 100%;
+    height: 4em;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid $color-neutral;
+    margin-bottom: 1em;
+  }
+  
+  .logo-box h2{
+    color: white;
+    margin: 0;
+  }
+  
+  li {
+    color: $color-text-disabled;
+    padding: .5em .5em .5em 5em;
+  }
+  
+  li:not(.active):hover {
+    cursor: pointer;
+    border-right: 4px solid $color-primary-lt;
+  }
+  
+  .active {
+    color: $color-white;
+    border-right: 4px solid $color-primary-xlt;
+  }
+  
+  .zmdi {
+    margin-right: 1em;
+    margin-left: -2em;
+  }
+}
+
+/* INNER CONTAINER */
+
+.inner-container {
+  flex: 0 0 calc(100% - 15em);
+  height: 100%;
+  background: $color-neutral;
+  padding: 0 2em 2em 2em;
+  lost-utility: clearfix;
+  margin-left: 15em;
+}
+
+/* BUTTON STYLES */
+
+*[class*="btn"] {
+  border: none;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 1rem;
+}
+
+.btn-xlg {
+  padding: 1em;
+}
+
+.btn-lg {
+  padding: 0.8em;
+}
+
+.btn-rg {
+  padding: 0.64em;
+}
+
+.btn-sm {
+  padding: 0.512em;
+}
+
+.btn-remove {
+  &:hover {
+    color: $color-alert;
+  }
+}
+
+.btn-settings {
+  &:hover {
+    color: $color-warning;
+  }
+}
+
+.btn-accordion {
+  &:hover {
+    color: $color-success;
+  }
+}
+
+#submit {
+/*   position: absolute; */
+/*   top: 50%; */
+/*   right: 2em; */
+/*   transform: translate(0, -50%); */
+/*   height: 100%;
+  width: 13em; */
+}
+
+/* MODALS */
+
+*[class*="modal-"] {
+  background: $color-white;
+  box-shadow: $box-shadow;
+  padding: 0 2em 2em 2em;
+  
+  input {
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    padding-left: 1em;
+    font-size: 1rem;
+    margin: 1em 0;
+    position: relative;
+  }
+}
+
+.modal-lg {
+  margin-bottom: 2em;
+}
+
+.modalcontainer {
+  lost-utility: clearfix;
+}
+
+.modaltitlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  min-height: 2em;
+  border-bottom: 1px solid $color-border;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 1em;
+  background: $color-neutral;
+
+  button {
+    border: none;
+    background: none;
+    color: $color-border;
+    cursor: pointer;
+  }
+}
+
+.section-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .5em 1em;
+  min-height: 2em;
+  border-bottom: 1px solid $color-border;
+  width: calc(100% + 4em);
+  margin-left: -2em;
+  margin-bottom: 1em;
+  background: $color-primary-lt;
+  color: $color-white;
+
+  button {
+    border: none;
+    background: none;
+    color: $color-border;
+    cursor: pointer;
+  }
+}
+
+.title {
+  margin: 0;
+}
+
+.modal-lg {
+  lost-column: 1/2 2;
+  min-height: 2em;
+  .modaltitlebar {
+/*     background: $color-primary; */
+  }
+}
+
+.modal-md {
+  .modaltitlebar {
+/*     background: #b3e5fc; */
+  }
+}
+
+.modal-sm {
+  .modaltitlebar {
+/*     background: #e1f5fe; */
+  }
+}
+
+.field-input {
+  position: relative;
+  margin-bottom: 2em;
+  
+  input,
+  select {
+    display: block;
+    width: 100%;
+    height: 2.5em;
+    padding-left: 1em;
+    font-size: 1rem;
+    margin: 1em 0;
+    position: relative;
+  }
+  
+  label button {
+    height: 2.5em;
+    width: 2.5em;
+    position: absolute;
+    top: 2.45em;
+    right: 0;
+    
+    &:hover {
+      background: $color-success;
+      color: white;
+    }
+  }
+}

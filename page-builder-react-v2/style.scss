@@ -1,0 +1,382 @@
+/*
+********** Vendor index
+*/
+/* https://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*
+********** Config index
+*/
+/**** COLORS ****/
+/* block color */
+/**** TYOGRAPHY ****/
+h1 {
+  color: #43484d;
+  font-size: 3.25rem;
+  font-weight: 400;
+  line-height: 3.625rem;
+  margin-bottom: 2rem;
+  letter-spacing: -0.125rem; }
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.5625rem;
+  color: #43484d;
+  margin-bottom: 1rem; }
+
+p {
+  font-size: 1rem;
+  line-height: 1.5625rem;
+  font-weight: 400;
+  color: #86939e;
+  /*   margin-bottom: 1rem; */ }
+
+.subheader {
+  display: block;
+  color: #43484d;
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin: 0 auto 3rem; }
+
+.tag {
+  display: block;
+  color: #86939e;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 2em;
+  text-align: center; }
+
+.titlebar {
+  display: block;
+  color: white;
+  box-shadow: 0rem 0.125rem 0.375rem -0.125rem black;
+  position: relative;
+  padding: 0.5em 0 0.5em 1em; }
+
+.titlebar-lg {
+  font-size: 1.375rem;
+  font-weight: 400;
+  line-height: 2rem;
+  margin: 0 auto 3rem;
+  min-height: 3.375rem;
+  width: calc(100% + 2em);
+  background: #358ed7;
+  margin-left: -1rem; }
+
+.titlebar-md {
+  min-height: 2.1875rem;
+  background: #838cc7;
+  width: calc(100% + 4em);
+  margin: -2em 0 2em -2em; }
+
+.titlebar-sm {
+  background: #53bbb3;
+  width: calc(100% + 2em);
+  margin-left: -1em;
+  top: -1em; }
+
+.titlebar-xs {
+  color: black;
+  width: calc(100% + 1em);
+  background: #eee;
+  margin: 0 0 1em -.5em;
+  top: -.5em; }
+
+/**** FORMS ****/
+form:before{
+  content: '';
+  display: table; }
+form:after{
+  content: '';
+  display: table;
+  clear: both; }
+
+label {
+  display: block;
+  margin-bottom: 1em;
+  position: relative; }
+
+select {
+  margin-top: .5em;
+  position: relative; }
+  select option {
+    padding: .25em .25em .25em 0; }
+
+input, select {
+  width: 100%;
+  padding: .25em .25em .25em 0;
+  font-size: 0.875rem;
+  border: none;
+  border-bottom: 0.0625rem solid #e1e8ee; }
+  input:focus, select:focus {
+    outline: none; }
+
+input[type="range"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0;
+  color: #e1e8ee;
+  background-color: #e1e8ee;
+  height: 0.0625rem; }
+
+datalist {
+  display: block;
+  width: 100%; }
+  datalist option {
+    display: inline-block;
+    width: 20%;
+    font-size: 0.875rem;
+    margin-left: -0.25rem;
+    padding-left: 0.25rem; }
+    datalist option:first-child {
+      margin-left: 0; }
+    datalist option:nth-child(2) {
+      padding-left: 0.875rem; }
+    datalist option:nth-child(3) {
+      padding-left: 1.375rem; }
+    datalist option:nth-child(4) {
+      padding-left: 2rem; }
+    datalist option:nth-child(5) {
+      padding-left: 2.625rem; }
+
+/**** BUTTONS ****/
+button:focus {
+  outline: none; }
+
+.toggle-btn {
+  display: inline-block;
+  padding: 0;
+  background: transparent;
+  position: absolute;
+  right: 2em;
+  top: 25%;
+  cursor: pointer; }
+
+.toggle-btn-lg {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 0.625rem solid transparent;
+  border-bottom-color: white; }
+
+.toggle-btn-md {
+  border: 0.625rem solid transparent;
+  border-bottom-color: white; }
+
+.toggle-btn-sm {
+  border: 0.5rem solid transparent;
+  border-bottom-color: white; }
+
+.toggle-btn-xs {
+  border: 0.4375rem solid transparent;
+  border-bottom-color: black; }
+
+.add-comp-btn {
+  position: absolute;
+  right: 0;
+  top: 2.55em; }
+
+#add-element-btn {
+  position: absolute;
+  right: 0;
+  bottom: 2.25em; }
+
+.divider {
+  width: 100%;
+  height: 0; }
+
+.divider:before{
+  content: '';
+  display: table; }
+
+.divider:after{
+  content: '';
+  display: table;
+  clear: both; }
+
+#add-sect-btn {
+  position: absolute;
+  bottom: 2em;
+  left: 3.5em; }
+
+#add-field-btn {
+  position: absolute;
+  top: 1em;
+  right: 1em; }
+
+.delete-element-btn {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%); }
+
+.next-btn {
+  position: absolute;
+  bottom: 2em;
+  left: 3rem;
+  padding: 0.5em 1em;
+  border: 0.0625rem solid #7dc855;
+  background: white; }
+
+/*
+********** Components index
+*/
+/**** PAGE BUILDER ****/
+#page-builder .wrapper {
+  width: 100%;
+  height: 100vh;
+  /*     max-width: 1440px; */
+  max-width: 100rem;
+  margin: 0 auto; }
+
+#page-builder .modal {
+  margin: 2em;
+  padding: 1em;
+  background: #ffffff;
+  box-shadow: 0rem 0.125rem 0.375rem -0.125rem black;
+  position: relative;
+  overflow: visible !important; }
+
+#page-builder .modal:before{
+  content: '';
+  display: table; }
+
+#page-builder .modal:after{
+  content: '';
+  display: table;
+  clear: both; }
+
+#page-builder .modal-half {
+  min-height: 24.0625rem;
+  width: calc(50% - 4em);
+  float: left; }
+  #page-builder .modal-half li {
+    float: left;
+    margin: 0 2em 4em;
+    width: calc(50% - 4em);
+    position: relative; }
+  #page-builder .modal-half #section-info {
+    margin-top: -2em;
+    margin-bottom: 0;
+    max-height: 10rem;
+    overflow-y: auto; }
+
+#page-builder .inner-modal-container {
+  width: 100%;
+  height: 100%; }
+
+#page-builder .inner-modal-container:before{
+  content: '';
+  display: table; }
+
+#page-builder .inner-modal-container:after{
+  content: '';
+  display: table;
+  clear: both; }
+
+#page-builder .inner-modal {
+  background: white;
+  min-height: 9.375rem;
+  border: 0.0625rem solid #e1e8ee;
+  box-shadow: 0rem 0.125rem 0.375rem -0.125rem black;
+  position: relative; }
+
+#page-builder .inner-modal-lg {
+  padding: 2em;
+  float: left;
+  margin: 0 2em 4em;
+  width: calc(50% - 4em);
+  min-height: 3.125rem; }
+  #page-builder .inner-modal-lg input {
+    margin-bottom: 2em; }
+
+#page-builder .inner-modal-md {
+  padding: 1em;
+  margin-bottom: 2em; }
+  #page-builder .inner-modal-md input, #page-builder .inner-modal-md select {
+    margin-bottom: 2em; }
+  #page-builder .inner-modal-md select {
+    max-width: 90%; }
+
+#page-builder .field-options {
+  border: 0.125rem solid #e1e8ee;
+  padding: 0.5em;
+  margin-bottom: 2em; }
+  #page-builder .field-options input {
+    background: transparent; }
+
+#page-builder #submit {
+  position: absolute;
+  bottom: 4em;
+  right: 4em;
+  background: pink;
+  padding: 1em 2em;
+  cursor: pointer; }
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  background: #eee;
+  font-smoothing: anti-aliased; }
+
+* {
+  box-sizing: border-box; }
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#build-btn {
+  border: none;
+  padding: 1em;
+  color: white;
+  font-size: 1.25em;
+  cursor: pointer;
+  background: lighten(seagreen, 10%);
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+/*# sourceMappingURL=main.min.css.map */
+

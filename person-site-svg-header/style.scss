@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 1150px;
+  height: 400px;
+  // background: rgba(200, 0, 0, 0.1);
+}
+
+// background: linear-gradient(to right, #3d7eaa, #ffe47a)
+
+svg {
+  width: 100%;
+  height: 100%;
+  
+  g {
+    opacity: 0.6;
+  }
+}

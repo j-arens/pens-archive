@@ -1,0 +1,121 @@
+/* 
+** BASE STYLES
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-user-select: none;
+}
+
+.calculator-body {
+  width: 600px;
+  height: 605px;
+  background: grey;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid grey;
+  border-radius: 5px;
+}
+
+header {
+  width: auto;
+  height: 50px;
+  background: lightgrey;
+  text-align: center;
+  padding-top: 2px;
+}
+
+header h1,
+span {
+  margin: 0;
+  font-family: monospace;
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+#screen {
+  width: auto;
+  height: 90px;
+  background: white;
+  margin-top: 5px;
+  border-radius: 2px;
+  color: black;
+  font-size: 4em;
+  text-align: right;
+/*   overflow: scroll; */
+  font-family: monospace;
+  padding-top: 1vh;
+}
+
+span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}
+/* 
+** BUTTON GRID
+*/
+
+.button-container {
+  width: auto;
+  height: 500px;
+}
+
+[class*='col-'] {
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px;
+  background: white;
+  position: relative;
+  border-radius: 2px;
+}
+
+[class*='col-']:last-of-type {
+  margin-right: 0px;
+}
+
+.col-1 {
+  width: 114px;
+  height: 70px;
+}
+
+.col-2 {
+  width: 233px;
+  height: 70px;
+}
+/* 
+** HOVERS AND ACTIVES
+*/
+
+[class*='col-']:hover {
+  background: silver;
+}
+
+[class*='col-']:active {
+  background: white;
+}
+
+.equals-button {
+  height: 145px;
+  float: right;
+  background: silver;
+}
+
+.function-button {
+  background: whitesmoke;
+}
+
+.equals-button:hover {
+  background: palegreen;
+}
+
+.equals-button:active {
+  background: white;
+}

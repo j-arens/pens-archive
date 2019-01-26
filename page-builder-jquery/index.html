@@ -1,0 +1,241 @@
+<!-- opt page builder -->
+<section id="page-builder">
+  <!-- wrapper -->
+  <div class="wrapper">
+    <!-- form -->
+    <form action="">
+      <!-- page settings -->
+      
+      <!-- fieldset -->
+      <fieldset class="modal modal-half accordion-open">
+        <span class="titlebar titlebar-lg">Page Settings<!--<button class="toggle-btn toggle-btn-lg"></button>--></span>
+        <ul class="field-list">
+          <li>
+            <label>Page Title</label>
+            <input type="text" placeholder="dashboard menu title" />
+          </li>
+          <li>
+            <label>Namespace</label>
+            <input type="text" placeholder="opt_page" />
+          </li>
+          <li>
+            <label>Priority</label>
+            <datalist id="range-ticks">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </datalist>
+            <input type="range" value="1" step="1" min="0" max="4" list="range-ticks" />
+          </li>
+          <li>
+            <label>Dashicon</label>
+            <select class="icon-select">
+              <option>hamburger</option>
+              <option>globe</option>
+              <option>pointer</option>
+              <option>page</option>
+              <option>large brush</option>
+              <option>wrench</option>
+              <option>dials</option>
+              <option>key</option>
+              <option>home</option>
+              <option>cog</option>
+              <option>small brush</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+      <!-- end fieldset -->
+      
+      <!-- fieldset -->
+      <fieldset class="modal modal-half accordion-open">
+        <span class="titlebar titlebar-lg">Customizable Sections</span>
+        <ul class="field-list">
+          <li>
+            <label>Section Title</label>
+            <input id="section-title" type="text" placeholder="header"/>
+          </li>
+          <li>
+            <label>Position</label>
+            <input type="number" min="0" placeholder="1" />
+          </li>
+          <li>
+            <label>Component</label>
+            <input id="component-input" type="text" placeholder="call to action 1"/>
+            <button class="add-comp-btn">+</button>
+          </li>
+          <li id="section-info">
+            <label></label>
+          </li>
+        </ul>
+        <button id="add-sect-btn">Add Section</button>
+      </fieldset>
+      <!-- end fieldset-->
+      
+      <div class="divider"></div>
+      
+      <!-- fieldset -->
+<!--       <fieldset class="modal accordion-open">
+        <span class="titlebar titlebar-lg">Header<button class="toggle-btn toggle-btn-lg"></button></span>
+        <ul class="inner-modal-container masonry">
+          <li class="inner-modal inner-modal-lg accordion-open">
+            <span class="titlebar titlebar-md">Call to action</span>
+            <label>
+              Element
+              <input type="text" placeholder="background color" />
+              <button id="add-element-btn">+</button>
+            </label>
+            <ul>
+              <li class="inner-modal inner-modal-md accordion-open">
+                <span class="titlebar titlebar-sm">Background image</span>
+                <label>Field</label>
+                <select>
+                  <option value="text">text</option>
+                  <option value="password">password</option>
+                  <option value="secret-text">secret text</option>
+                  <option value="text-area">text area</option>
+                  <option value="single-checkbox">single checkbox</option>
+                  <option value="multiple-checkbox">multiple checkbox</option>
+                  <option value="select box">select box</option>
+                  <option value="multiple-select-box">multiple select box</option>
+                  <option value="radio-buttons">radio buttons</option>
+                  <option value="number-field">number field</option>
+                  <option value="color-picker">color picker</option>
+                  <option value="image-upload">image upload</option>
+                </select>
+                <button id="add-field-btn">+</button>
+                <div class="field-options text accordion-open">
+                  <span class="titlebar titlebar-xs">Text</span>
+                  <label>Field Name</label>
+                  <input type="text" />
+                  <label>Placeholder</label>
+                  <input type="text" />
+                  <label>description</label>
+                  <input type="textarea" />
+                </div>
+                <div class="field-options password accordion-open">
+                  <span class="titlebar titlebar-xs">Password</span>
+                  <label>Field Name</label>
+                  <input type="text" />
+                  <label>Placeholder</label>
+                  <input type="text" />
+                  <label>description</label>
+                  <input type="textarea" />
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="inner-modal inner-modal-lg accordion-open">
+            <span class="titlebar titlebar-md">Link box 1</span>
+            <label>Element</label>
+            <input type="text" placeholder="icon" />
+            <ul>
+              <li class="inner-modal inner-modal-md accordion-open">
+                <span class="titlebar titlebar-sm">Background image</span>
+                <label>Field</label>
+                <select>
+                  <option value="text">text</option>
+                  <option value="password">password</option>
+                  <option value="secret-text">secret text</option>
+                  <option value="text-area">text area</option>
+                  <option value="single-checkbox">single checkbox</option>
+                  <option value="multiple-checkbox">multiple checkbox</option>
+                  <option value="select box">select box</option>
+                  <option value="multiple-select-box">multiple select box</option>
+                  <option value="radio-buttons">radio buttons</option>
+                  <option value="number-field">number field</option>
+                  <option value="color-picker">color picker</option>
+                  <option value="image-upload">image upload</option>
+                </select>
+                <div class="field-options text accordion-open">
+                  <span class="titlebar titlebar-xs">Text</span>
+                  <label>Field Name</label>
+                  <input type="text" />
+                  <label>Placeholder</label>
+                  <input type="text" />
+                  <label>description</label>
+                  <input type="textarea" />
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="inner-modal inner-modal-lg accordion-open">
+            <span class="titlebar titlebar-md">Link box 1</span>
+            <label>Element</label>
+            <input type="text" placeholder="icon" />
+            <ul>
+              <li class="inner-modal inner-modal-md accordion-open">
+                <span class="titlebar titlebar-sm">Background image</span>
+                <label>Field</label>
+                <select>
+                  <option value="text">text</option>
+                  <option value="password">password</option>
+                  <option value="secret-text">secret text</option>
+                  <option value="text-area">text area</option>
+                  <option value="single-checkbox">single checkbox</option>
+                  <option value="multiple-checkbox">multiple checkbox</option>
+                  <option value="select box">select box</option>
+                  <option value="multiple-select-box">multiple select box</option>
+                  <option value="radio-buttons">radio buttons</option>
+                  <option value="number-field">number field</option>
+                  <option value="color-picker">color picker</option>
+                  <option value="image-upload">image upload</option>
+                </select>
+                <div class="field-options text accordion-open">
+                  <span class="titlebar titlebar-xs">Text</span>
+                  <label>Field Name</label>
+                  <input type="text" />
+                  <label>Placeholder</label>
+                  <input type="text" />
+                  <label>description</label>
+                  <input type="textarea" />
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="inner-modal inner-modal-lg accordion-open">
+            <span class="titlebar titlebar-md">Link box 1</span>
+            <label>Element</label>
+            <input type="text" placeholder="icon" />
+            <ul>
+              <li class="inner-modal inner-modal-md accordion-open">
+                <span class="titlebar titlebar-sm">Background image</span>
+                <label>Field</label>
+                <select>
+                  <option value="text">text</option>
+                  <option value="password">password</option>
+                  <option value="secret-text">secret text</option>
+                  <option value="text-area">text area</option>
+                  <option value="single-checkbox">single checkbox</option>
+                  <option value="multiple-checkbox">multiple checkbox</option>
+                  <option value="select box">select box</option>
+                  <option value="multiple-select-box">multiple select box</option>
+                  <option value="radio-buttons">radio buttons</option>
+                  <option value="number-field">number field</option>
+                  <option value="color-picker">color picker</option>
+                  <option value="image-upload">image upload</option>
+                </select>
+                <div class="field-options text accordion-open">
+                  <span class="titlebar titlebar-xs">Text</span>
+                  <label>Field Name</label>
+                  <input type="text" />
+                  <label>Placeholder</label>
+                  <input type="text" />
+                  <label>description</label>
+                  <input type="textarea" />
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </fieldset> -->
+      <!-- end fieldset -->
+      
+    </form>
+    <!-- end form -->
+  </div>
+  <!-- end wrapper -->
+</section>
+<!-- end opt page builder -->

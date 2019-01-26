@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  background: #f1f1f1;
+  padding-top: 4em;
+  padding-bottom: 4em;
+}
+
+.postbox {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #fff;
+  height: auto;
+}
+
+/** dpi sm editor styles **/
+
+#dpi-sm-editor-root {
+  
+  .dpi-sm-menu-item-type {
+    .uk-form-label {
+      font-size: 1em;
+    }
+    
+    label {
+      display: inline-block;
+    }
+    
+    label + label {
+      margin-left: 1em;
+    }
+    
+    input[type="radio"] {
+      margin-right: .25em;
+    }
+  }
+  
+  .dpi-sm-custom-link-options {
+    input[type="radio"] {
+      margin-right: .25em;
+    }
+  }
+}
+
+/** nav bar styles **/
+.uk-navbar-nav > li > a {
+  height: 4em !important;
+}
+
+.uk-navbar-dropbar {
+  height: auto;
+}
+
+.dropbar-drag-container {
+  padding: calc(15px - .5em);
+  padding-bottom: 0;
+  display: block;
+  
+  &[class*="uk-column-1-"] {
+    column-gap: 1em;
+  }
+}
+
+.uk-navbar-dropdown-nav {
+  display: inline-block;
+}
+
+.uk-placeholder {
+  margin-bottom: 0 !important;
+  padding: .5em !important;
+  height: 100%;
+  position: relative;
+  background: #fff !important;
+}
+
+.ui-sortable-helper {
+  opacity: 0.7;
+  background: rgba(71, 157, 241, 0.05) !important;
+  border: 1px dashed rgba(71, 157, 241, 0.5) !important;
+}
+
+.ui-sortable-placeholder {
+  visibility: visible !important;
+  border: 1px dashed rgba(71, 157, 241, 0.5) !important;
+}
+
+/** controls **/
+
+.uk-button-dropdown {
+  position: relative;
+}
+
+.uk-dropdown-nav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #fff;
+  display: none;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+  
+  > li > a {
+    padding: 0 !important;
+  }
+}
+
+/**  columns **/
+
+.drag-column {
+  min-height: 300px;
+  
+  // &::after {
+  //   content: '';
+  //   width: 1.85em;
+  //   height: 1.75em;
+  //   position: absolute;
+  //   top: 0;
+  //   right: calc(1.8em + 2px);
+  //   z-index: 99999;
+  //   background: transparent;
+  //   cursor: move;
+  //   background: pink;
+  // }
+}
+
+.ui-sortable-helper::after {
+  background: #013c75;
+  opacity: 0.1;
+}
+
+.column-controls {
+  position: absolute;
+  top: 0;
+  right: -3px;
+  z-index: 2;
+  width: 6em;
+  
+  .uk-button-group {
+    width: 100% !important;
+  }
+  
+  button {
+    width: 33.33%;
+    padding: 0;
+    line-height: 0;
+    height: 2em;
+  }
+  
+  .uk-placeholder.blank {
+    cursor: pointer;
+  }
+  
+  .dropdown-button svg,
+  .drag-button svg,
+  .delete-button svg {
+    fill: #fff;
+  }
+  
+  .dropdown-button svg {
+    position: relative;
+    // top: .2em;
+    width: 1.2em;
+    height: 1.2em;
+  }
+  
+  .drag-button svg {
+    width: 1.15em;
+    height: 1.15em;
+  }
+  
+  .delete-button {
+    svg {
+      width: 1.25em;
+      height: 1.25em;
+    }
+    
+    &:hover {
+      background: #ee395b;
+    }
+  }
+}
+
+/** column type selector **/
+
+.columnType-selector {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 1em;
+  
+  .uk-heading-divider {
+    margin-top: 0;
+  }
+  
+  .back-button {
+    line-height: 0;
+    position: absolute;
+    right: 1em;
+    top: 1.25em;
+    
+    h5 {
+      margin: 0;
+      padding: 0;
+      display: inline-block;
+    }
+  }
+  
+  .back-button svg {
+    width: 1em;
+    height: 1em;
+    position: relative;
+    bottom: 2px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.uk-sortable-handle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Blank {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+  p {
+    margin: 0;
+  }
+}
+
+.blank-helper-message {
+  text-align: center;
+  padding-top: 20vh;
+}
+
+.column-image {
+  width: 100%;
+  height: 100%;
+  
+  svg {
+    width: 4em;
+    fill: #bbb;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.image-picker {
+  background: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.column-image figure {
+  background: pink;
+  width: 100%;
+  height: 100%;
+}

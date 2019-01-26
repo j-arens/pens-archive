@@ -1,0 +1,104 @@
+<div class="mw-container">
+  <article class="message is-warning">
+    <div class="message-body">
+      <div class="content">
+        <ul>
+          <li>
+            <p>The follwing steps outline how to programmatically clip and unclip mPerks coupons at scale.</p>
+          </li>
+          <li>
+            <p>Any updates that Meijer makes to the mPerks site can and will render these steps void.</p>
+          </li>
+          <li>
+            <p>These instructions are intended for use with the Google Chrome browser, your results may vary using other web browsers.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <div class="notification">
+    <div class="content">
+      <h1 class="title">Step 1</h1>
+      <p>Login to your <a href="https://accounts.meijer.com/manage/" target="_blank" rel="noopener">mPerks account</a>.</p>
+      <p>Once there follow the "Coupons" link in the top navbar to view the coupons page.</p>
+      <p>Scoll all the way down to the bottom of the page two or three times. This will cause the page to "paginate" and dynamically load in more coupons.</p>
+    </div>
+  </div>
+
+  <div class="notification">
+    <div class="content">
+      <h1 class="title">Step 2</h1>
+      <p>Open the dev tools by pressing <code>f12</code> or by right clicking, and going to <code>inspect</code>.</p>
+      <p>At the top of the dev tools click on <code>Console</code>.</p>
+      <p>Now towards the bottom you'll see a little blue chevron. Click next to it to insert your cursor. Type in the command <code>clear()</code> and hit enter to clear the console.</p>
+    </div>
+  </div>
+
+  <div class="notification">
+    <div class="content">
+      <h1 class="title">Step 3</h1>
+      <p>
+        Now select all of the coupons on the page by using this command in the console:
+        <br>
+        <pre>
+          <code>
+            const coupons = Array.from(document.querySelectorAll('.coupon-card'));
+          </code>
+        </pre>
+      </p>
+      <p>
+        You can confirm that this operation worked by checking that the value of the constant <code>coupons</code>.
+        <br>
+        Type <code>coupons</code> into the console and hit enter. It should return an array of all of the coupon elements.
+      </p>
+    </div>
+  </div>
+  
+  <div class="notification">
+    <div class="content">
+      <h1 class="title">Step 4</h1>
+      <p>
+        To clip all of the coupons on the page you'll need to loop through each one and simulate a click event.
+        <br>
+        <pre>
+          <code>
+            coupons.forEach(coupon => {
+              coupon.querySelector('#clipBtn').dispatchEvent(new MouseEvent('click'));
+            });
+          </code>
+        </pre>
+      </p>
+    <p>The page will pop open several dialogs warning you that you've clipped the maximum number of coupons. Simply refresh the page to clear it out.</p>
+    </div>
+  </div>
+
+<div class="notification">
+  <div class="content">
+    <h1 class="title">Step 5 (optional)</h1>
+    <p>
+      If you want to unclip all of the coupons you can simply make a slight modification to step 4.
+      <pre>
+        <code>
+          coupons.forEach(coupon => {
+              coupon.querySelector('.unclip-btn').dispatchEvent(new MouseEvent('click'));
+            });
+        </code>
+      </pre>
+    </p>
+  <p>You can clip or unclip a specific number of coupons by creating a copy of and splicing the coupons array.</p>
+  <pre>
+    <code>
+      [...coupons].splice(0, YOUR_NUMBER_HERE).forEach(coupon => {
+        //clip
+        coupon.querySelector('#clipBtn').dispatchEvent(new MouseEvent('click'));
+        
+        //unclip
+        coupon.querySelector('.unclip-btn').dispatchEvent(new MouseEvent('click'));
+      });
+    </code>
+  </pre>
+  </div>
+</div>
+  
+</div>

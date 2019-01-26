@@ -1,0 +1,178 @@
+<!-- 
+
+work in progress detail checklist app
+
+ -->
+
+<h1>Rivertown Honda Detail Checklist</h1>
+
+<form method="post" action="">
+
+  <fieldset>
+    <legend>Info</legend>
+    <label>
+      Date
+      <input name="date" type="date" />
+    </label>
+    <label>
+      Stock Number / R.O#
+      <input name="stock-number" type="text" />
+    </label>
+    <label>
+      Manufacturer
+      <input name="manufacturer" type="text" />
+    </label>
+    <label>
+      Model
+      <input name="model" type="text" />
+    </label>
+    <label>
+      Color
+      <input name="color" type="text" />
+    </label>
+    <label>
+      Technician
+      <select name="tech">
+        <option>Josh #369</option>
+        <option>Nate #123</option>
+        <option>Ben #456</option>
+        <option>Cameron #789</option>
+        <option>Ryan #123</option>
+        <option>Roy #456</option>
+      </select>
+    </label>
+    <label>
+      Detail
+      <select name="detail-type">
+        <option>Full</option>
+        <option>Wash and Vac</option>
+        <option>Flash</option>
+        <option>Delivery</option>
+        <option>Customer</option>
+      </select>
+    </label>
+  </fieldset>
+
+  <fieldset>
+    <legend>Exterior</legend>
+    <ul>
+      <li>
+        <input name="exterior-1" type="checkbox" />
+        <label for="exterior-1">Vehicle hand washed</label>
+      </li>
+      <li>
+        <input name="exterior-2" type="checkbox" />
+        <label for="exterior-2">Remove bugs, road tar, tree sap</label>
+      </li>
+      <li>
+        <input name="exterior-3" type="checkbox" />
+        <label for="exterior-3">Tires and wheels cleaned</label>
+      </li>
+      <li>
+        <input name="exterior-4" type="checkbox" />
+        <label for="exterior-4">Wheel wells cleaned, dressed, and polished</label>
+      </li>
+      <li>
+        <input name="exterior-5" type="checkbox" />
+        <label for="exterior-5">Windows and mirrors cleaned</label>
+      </li>
+      <li>
+        <input name="exterior-6" type="checkbox" />
+        <label for="exterior-6">Chrome polished</label>
+      </li>
+      <li>
+        <input name="exterior-7" type="checkbox" />
+        <label for="exterior-7">Paint waxed</label>
+      </li>
+      <li>
+        <input name="exterior-8" type="checkbox" />
+        <label for="exterior-8">Trim and moldings dressed</label>
+      </li>
+      <li>
+        <input name="exterior-9" type="checkbox" />
+        <label for="exterior-9">Tailpipe cleaned and polished</label>
+      </li>
+      <li>
+        <input name="exterior-10" type="checkbox" />
+        <label for="exterior-10">Engine, hood, and water channel cleaned</label>
+      </li>
+      <li>
+        <input name="exterior-11" type="checkbox" />
+        <label for="exterior-11">Gas cap compartment cleaned</label>
+      </li>
+      <li>
+        <input name="exterior-12" type="checkbox" />
+        <label for="exterior-12">All buffing residue and dust removed</label>
+      </li>
+    </ul>
+  </fieldset>
+
+  <fieldset>
+    <legend>Interior</legend>
+    <ul>
+      <li>
+        <input name="interior-1" type="checkbox" />
+        <label for="interior-1">Vacuum interior and trunk</label>
+      </li>
+      <li>
+        <input name="interior-2" type="checkbox" />
+        <label for="interior-2">Overhead panels/compartments cleaned</label>
+      </li>
+      <li>
+        <input name="interior-3" type="checkbox" />
+        <label for="interior-3">Dashboard, vents, and console cleaned</label>
+      </li>
+      <li>
+        <input name="interior-4" type="checkbox" />
+        <label for="interior-4">Door panels vacuumed and cleaned</label>
+      </li>
+      <li>
+        <input name="interior-5" type="checkbox" />
+        <label for="interior-5">Visor mirrors and rear view mirror cleaned</label>
+      </li>
+      <li>
+        <input name="interior-6" type="checkbox" />
+        <label for="interior-6">Windshield and windows cleaned</label>
+      </li>
+      <li>
+        <input name="interior-7" type="checkbox" />
+        <label for="interior-7">Door trim and all plastics and vinyl dressed</label>
+      </li>
+      <li>
+        <input name="interior-8" type="checkbox" />
+        <label for="interior-8">Leather/carpet cleaned and treated</label>
+      </li>
+      <li>
+        <input name="interior-9" type="checkbox" />
+        <label for="interior-9">Floor mats cleaned</label>
+      </li>
+      <li>
+        <input name="interior-10" type="checkbox" />
+        <label for="interior-10">Leather conditioned</label>
+      </li>
+      <li>
+        <input name="interior-11" type="checkbox" />
+        <label for="interior-11">Headliner cleaned</label>
+      </li>
+      <li>
+        <input name="interior-12" type="checkbox" />
+        <label for="interior-12">Trunk area spot treated and cleaned</label>
+      </li>
+      <li>
+        <input name="interior-13" type="checkbox" />
+        <label for="interior-13">Spaire tire area cleaned</label>
+      </li>
+      <li>
+        <input name="interior-14" type="checkbox" />
+        <label for="interior-14">Foot pedals cleaned</label>
+      </li>
+    </ul>
+  </fieldset>
+
+  <label>
+    Comments
+    <input name="comments" type="textarea" />
+  </label>
+
+  <input type="submit" />
+</form>

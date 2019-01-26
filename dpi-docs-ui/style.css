@@ -1,0 +1,301 @@
+@use postcss-cssnext;
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+:root {
+  --flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  };
+}
+
+* {
+  box-sizing: border-box;
+  
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #43484d;
+  @apply --flex-center;
+  flex-direction: column;
+  padding: 10em 2em;
+}
+
+.container {
+  @apply --flex-center;
+}
+
+.container + .container {
+  margin-top: 4em;
+}
+
+/**
+* Typography
+*/
+
+:root {
+  --body-text: {
+    color: inherit;
+    margin-bottom: 1.3em;
+  }
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+  margin: 0 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+* > + h1,
+* > + h2,
+* > + h3,
+* > + h4,
+* > + h4,
+* > + h5,
+* > + h6 {
+  margin-top: 1.414rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.441em;
+}
+
+h2 {
+  font-size: 1.953em;
+}
+
+h3 {
+  font-size: 1.563em;
+}
+
+h4 {
+  font-size: 1.25em;
+}
+
+/**
+* Buttons
+*/
+
+:root {
+  /* colors */
+  --btnColorWhite: #fff;
+  --btnColorBaseBorder: #e1e8ee;
+  --btnColorBtnPrimary: #2C4770;
+  --btnColorBtnSuccess: #7dc855;
+  --btnColorBtnDanger: #C63B3B;
+  --btnColorBtnCaution: #C9B31F;
+  
+  /* custom props */
+  --btn-base {
+    @apply --flex-center;
+    position: relative;
+    color: inherit;
+    overflow: hidden;
+    font-family: inherit;
+    font-size: 1.125em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    padding: 1.2375rem 2.3125rem;
+    border: 2px solid var(--btnColorBaseBorder, #e1e8ee);
+    background: none;
+    cursor: pointer;
+    zoom: 1;
+    border-radius: 4px;
+    background: var(--btnColorWhite, #fff);
+    box-shadow: 0 0 1px 0.5px rgba(30, 30, 30, 0.1);
+    transition: transform .05s ease-out;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform-origin: center center;
+      height: 225%;
+      width: 100%;
+      border-radius: 50%;
+      background: rgba(225, 232, 238, 0.5);
+      opacity: 0;
+    }
+    &:focus {
+      outline: 0;
+    }
+    &:active {
+      box-shadow: none;
+      transform: scale3d(0.99, 0.99, 0.99);
+    }
+    &:hover {
+      &::after {
+        animation: pulse-button 0.8s 1;
+      }
+    }
+    & > * {
+      color: currentColor;
+      position: relative;
+      z-index: 1;
+    }
+    & > * + * {
+      margin-left: 1em;
+    }
+    & svg {
+      fill: currentColor;
+      width: 1.25em;
+      height: 1.25em;
+    }
+  };
+  --btn-primary {
+    background: var(--btnColorBtnPrimary, #2C4770);
+    border-color: var(--btnColorBtnPrimary, #2C4770);
+    color: var(--btnColorWhite, #fff);
+    box-shadow: 0 0 1px 0.5px rgba(30, 30, 30, 0.4);
+    &::after {
+      background: rgba(76, 102, 140, 0.7);
+    }
+  };
+  --btn-success {
+    background: var(--btnColorBtnSuccess, #7dc855);
+    border-color: var(--btnColorBtnSuccess, #7dc855);
+    color: var(--btnColorWhite, #fff);
+    box-shadow: 0 0 1px 0.5px rgba(30, 30, 30, 0.2);
+    &::after {
+      background: rgba(163, 226, 129, 0.5);
+    }
+  };
+  --btn-danger {
+    background: var(--btnColorBtnDanger, #C63B3B);
+    border-color: var(--btnColorBtnDanger, #C63B3B);
+    color: var(--btnColorWhite, #fff);
+    box-shadow: 0 0 1px 0.5px rgba(30, 30, 30, 0.4);
+    &::after {
+      background: rgba(229, 98, 98, 0.5);
+    }
+  };
+  --btn-caution {
+    background: var(--btnColorBtnCaution, #C9B31F);
+    border-color: var(--btnColorBtnCaution, #C9B31F);
+    color: var(--colorWhite, #fff);
+    box-shadow: 0 0 1px 0.5px rgba(30, 30, 30, 0.2);
+    &::after {
+      background: rgba(224, 204, 70, 0.5);
+    }
+  }
+}
+
+button {
+  @apply --btn-base;
+}
+
+button[type="submit"] {
+  @apply --btn-success;
+}
+
+/* just for display */
+button + button {
+  margin-left: 1em;
+}
+
+@keyframes pulse-button {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+  
+  to {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.namespace__action-btn {
+  @apply --btn-primary;
+}
+
+.namespace__login-btn {
+  @apply --btn-success;
+}
+
+.namespace__delete-btn {
+  @apply --btn-danger;
+}
+
+.namespace__warning-btn {
+  @apply --btn-caution;
+}
+
+/**
+* box
+*/
+:root {
+  --boxColorBaseBorder: #f7f7f7;
+  
+  --box-base {
+    border: 3px solid var(--colorBoxBorder, #f7f7f7);
+    border-radius: 4px;
+    padding: 2.1875rem 1.5625rem;
+  }
+}
+
+.namespace__sidebar {
+  @apply --box-base;
+}
+
+.namespace__content {
+  @apply --body-text;
+}
+
+.namespace__neat {
+  @apply --btn-success;
+}
+
+/**
+* Inputs
+*/
+:root {
+  --colorInputBorder: #e1e8ee;
+  --colorInputBorderFocus: #758AA8;
+  --colorInputText: #43484d;
+  --colorInputPlaceholder: #86939e;
+  
+  --input-base {
+    border: 3px solid var(--colorInputBorder, #e1e8ee);
+    border-radius: 4px;
+    &::placeholder {
+      color: var(--colorInputPlaceholder, #86939e);
+    }
+  };
+  --input-text {
+    padding: 1.375rem 1.25rem;
+    font-size: 1.25em;
+    color: var(--colorInputText, #43484d);
+  };
+}
+
+input[type="text"],
+textarea {
+  @apply --input-base;
+  @apply --input-text;
+}
+
+input[type="submit"] {
+  @apply --btn-base;
+  @apply --btn-success;
+  font-size: 1.25em;
+  padding: 1.375rem 1.25rem;
+}

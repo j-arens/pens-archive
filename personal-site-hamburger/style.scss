@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Playfair+Display:400,400i');
+
+* {
+  box-sizing: border-box;
+  
+  &::after,
+  &::before {
+    box-sizing: border-box;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10em auto 0 auto;
+  width: 100px;
+  height: 100px;
+  // background: rgba(200, 0, 0, 0.2);
+}
+
+button {
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  width: 4em;
+  height: 4em;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  
+  svg {
+    pointer-events: none;
+  }
+  
+  &:hover {
+    .hover-circle,
+    .hover-line {
+      transform: translateX(0);
+    }
+  }
+  
+  // p {
+  //   margin: 0;
+  //   font-family: 'Playfair Display', serif;
+  //   font-style: italic;
+  //   font-size: 2.5em;
+  //   color: white;
+  //   position: absolute;
+  //   top: -0.1rem;
+  //   left: 0.5rem;
+  // }
+}
+
+.bg {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+  
+  ellipse {
+    opacity: 0.5;
+  }
+}
+
+.hamburger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2em;
+  height: 2em;
+  stroke-width: 3px;
+  stroke: #3b3b3b;
+  
+  .open {
+    transform: scale(1);
+    transform-origin: center center;
+    transition: transform .2s ease-in;
+  }
+  
+  .close {
+    transform: translate(5px, 5px) rotate(180deg) scale(0);
+    transform-origin: center center;
+    transition: transform .2s ease-in;
+  }
+  
+  circle {
+    transition: all .3s ease-in;
+  }
+  
+  .hover-line {
+    stroke: #fff;
+    transition: all .1s ease-in;
+    transform: translateX(-100%);
+    
+    &:nth-of-type(4) {
+      transition: all .1s ease-in .1s;
+    }
+    
+    &:last-of-type {
+      transition: all .1s ease-in .2s;
+    }
+  }
+  
+  .hover-circle {
+    stroke: #fff;
+    fill: #fff;
+    transform: translateX(300%);
+  }
+}
+
+body.menu-active {
+  .hamburger {
+    // circle,
+    // .hover-circle {
+    //   transform: translateX(300%);
+    // }
+    
+    .open {
+      transform: scale(0);
+    }
+    
+    .close {
+      transform: translate(5px, 5px) rotate(0) scale(1);
+    }
+  }
+}
